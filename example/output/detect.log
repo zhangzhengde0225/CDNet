@@ -1,0 +1,63 @@
+160x640 Done. (0.306s)
+filename_00030.jpg detect_id: 0 speed: None count: 0 status: No crosswalk
+160x640 Done. (0.283s)
+filename_00031.jpg detect_id: 1 speed: None count: 0 status: No crosswalk
+160x640 Done. (0.279s)
+filename_00032.jpg detect_id: 2 speed: None count: 0 status: No crosswalk
+160x640 Done. (0.290s)
+filename_00033.jpg detect_id: 3 speed: None count: 0 status: No crosswalk
+160x640 Done. (0.284s)
+filename_00034.jpg detect_id: 4 speed: None count: 0 status: No crosswalk
+160x640 Done. (0.276s)
+filename_00035.jpg detect_id: 5 speed: None count: 0 status: No crosswalk
+160x640 1 guide_arrowss, Done. (0.281s)
+filename_00036.jpg detect_id: 6 speed: None count: 0 status: No crosswalk
+160x640 1 crosswalks, 1 guide_arrowss, Done. (0.276s)
+filename_00037.jpg detect_id: 7 speed: None count: 0 status: No crosswalk
+160x640 1 crosswalks, Done. (0.291s)
+filename_00038.jpg detect_id: 8 speed: 19.0 count: 0 status: Crossing
+160x640 1 crosswalks, Done. (0.296s)
+filename_00039.jpg detect_id: 9 speed: 40.0 count: 0 status: Crossing
+160x640 1 crosswalks, Done. (0.285s)
+
+filename_00040.jpg count+1, conf: 0.96 count: 1
+filename_00040.jpg detect_id: 10 speed: 36.0 count: 1 status: Crossing
+160x640 1 crosswalks, Done. (0.285s)
+filename_00041.jpg detect_id: 11 speed: 40.0 count: 1 status: Crossing
+160x640 1 crosswalks, Done. (0.284s)
+filename_00042.jpg detect_id: 12 speed: 16.0 count: 1 status: Crossing
+160x640 1 crosswalks, Done. (0.278s)
+filename_00043.jpg detect_id: 13 speed: 35.0 count: 1 status: Crossing
+160x640 Done. (0.284s)
+filename_00044.jpg detect_id: 14 speed: None count: 1 status: Crossing
+160x640 Done. (0.286s)
+filename_00045.jpg detect_id: 15 speed: None count: 1 status: Crossing
+160x640 1 crosswalks, Done. (0.278s)
+filename_00046.jpg detect_id: 16 speed: -66.33333333333333 count: 1 status: No crosswalk
+160x640 2 crosswalks, Done. (0.282s)
+filename_00047.jpg detect_id: 17 speed: 12.0 count: 1 status: Crossing
+160x640 1 crosswalks, Done. (0.280s)
+filename_00048.jpg detect_id: 18 speed: 14.0 count: 1 status: Crossing
+160x640 1 crosswalks, Done. (0.283s)
+filename_00049.jpg detect_id: 19 speed: 41.0 count: 1 status: Crossing
+160x640 1 crosswalks, Done. (0.291s)
+filename_00050.jpg detect_id: 20 speed: 85.0 count: 1 status: Crossing
+160x640 Done. (0.277s)
+filename_00051.jpg detect_id: 21 speed: None count: 1 status: Crossing
+160x640 Done. (0.283s)
+filename_00052.jpg detect_id: 22 speed: None count: 1 status: Crossing
+160x640 Done. (0.285s)
+filename_00053.jpg detect_id: 23 speed: None count: 1 status: Crossing
+160x640 Done. (0.276s)
+filename_00054.jpg detect_id: 24 speed: None count: 1 status: Crossing
+160x640 Done. (0.282s)
+filename_00055.jpg detect_id: 25 speed: None count: 1 status: No crosswalk
+160x640 Done. (0.286s)
+filename_00056.jpg detect_id: 26 speed: None count: 1 status: No crosswalk
+160x640 Done. (0.278s)
+filename_00057.jpg detect_id: 27 speed: None count: 1 status: No crosswalk
+160x640 Done. (0.286s)
+filename_00058.jpg detect_id: 28 speed: None count: 1 status: No crosswalk
+160x640 Done. (0.287s)
+filename_00059.jpg detect_id: 29 speed: None count: 1 status: No crosswalk
+0.28381s 3.5234FPS
