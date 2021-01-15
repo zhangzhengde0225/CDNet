@@ -35,16 +35,18 @@ Download trainsets and testsets, please check out [docs/DATASETS.md](https://git
 Once you get the CDNet code, configure the environment and download the dataset, juse type:
 ```python
 python train.py \
---trainset_path /path/to/trainset/folder(train_data_yolov5_format)
---device "0, 1"  # cpu or gpu id, "0, 1" means use two gpu to train.
---img-size 640
---batch-size 32
---epochs 100
---
+--trainset_path /path/to/trainset/folder(such as: /home/xxx/datasets/train_data_yolov5_format) \
+--device "0, 1" \ # cpu or gpu id, "0, 1" means use two gpu to train.
+--img-size 640 \
+--batch-size 32 \
+--epochs 100 \
+--use-SE True  # use SE module embedded YOLOv5
 ```
+
 **Inference**: Inference images
 ```python
-python detect.py --
+python detect.py \
+--
 ```
 **Validation**: Repreduce the results on paper
 ```python

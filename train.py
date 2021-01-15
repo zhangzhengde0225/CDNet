@@ -91,7 +91,7 @@ def train(hyp, opt, device, tb_writer=None):
 			os.remove(f)
 
 	# Create model
-	if opt.useSE:
+	if opt.use_SE:
 		model = ModelSE(opt.cfg, nc=nc).to(device)
 	else:
 		model = Model(opt.cfg, nc=nc).to(device)
