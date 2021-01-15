@@ -154,7 +154,7 @@ def detect(opt, dp, save_img=False):
 							plot_one_box(xyxy, im0, label=label, color=color, line_thickness=5)
 
 			# Print time (inference + NMS)
-			prt_str = '%sDone. (%.3fs)' % (s, t2 - t1)
+			prt_str = '%sDone. (%.5fs)' % (s, t2 - t1)
 			print(prt_str)
 			os.system(f'echo "{prt_str}" >> {opt.output}/detect.log')
 
@@ -215,10 +215,10 @@ if __name__ == '__main__':
 						help='model.pt path(s)')
 	parser.add_argument('--source', type=str, default='example/images', help='source')  # file/folder, 0 for webcam
 	parser.add_argument('--output', type=str, default='example/output', help='output folder')  # output folder
-	parser.add_argument('--img-size', type=int, default=288, help='inference size (pixels)')
+	parser.add_argument('--img-size', type=int, default=1280, help='inference size (pixels)')
 	parser.add_argument('--conf-thres', type=float, default=0.4, help='object confidence threshold')
 	parser.add_argument('--iou-thres', type=float, default=0.5, help='IOU threshold for NMS')
-	parser.add_argument('--device', default='1,2', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
+	parser.add_argument('--device', default='0', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
 	parser.add_argument('--view-img', action='store_true', help='display results')
 	parser.add_argument('--save-txt', type=bool, default=True, help='save results to *.txt')
 	parser.add_argument('--classes', nargs='+', type=int, help='filter by class: --class 0, or --class 0 2 3')
@@ -229,7 +229,7 @@ if __name__ == '__main__':
 	parser.add_argument('--select_control_line', type=str, default='general', help='select which control line. i.e. general, 0036')
 	parser.add_argument('--field_size', type=int, default=5, help='receptive filed size for post')
 	parser.add_argument('--plot_classes', type=list, default=['crosswalk'], help='specifies which classes will be drawn')
-	parser.add_argument('--use_roi', type=bool, default=True, help='use roi to accelerate inference speed')
+	parser.add_argument('--use_roi', type=bool, default=False, help='use roi to accelerate inference speed')
 
 	opt = parser.parse_args()
 
@@ -237,13 +237,16 @@ if __name__ == '__main__':
 	dp = post.DmPost(opt)
 
 	print(opt)
-	testset = "/root/datasets/crosswalk/origin_videos/tmp_test"
-	opt.source = f"{testset}"
-	base_path = "/root/PycharmProject/book_pytorch/yolov5_zzd/runs"
-	exp = "v5mCD640exp"
-	opt.weights = f"{base_path}/{exp}/weights/best.pt"
-	opt.output = f'{testset}/detected3'
+	# testset = "/root/datasets/crosswalk/origin_videos/tmp_test"
+	# opt.source = f"{testset}"
+	# base_path = "/root/PycharmProject/book_pytorch/yolov5_zzd/runs"
+	# exp = "v5mCD640exp"
+	# opt.weights = f"{base_path}/{exp}/weights/best.pt"
+	opt.weights = f"runs/v5mCD640exp/weights/v5mCD640.pt"
+	# opt.output = f'{testset}/detected3'
+	runtime = time.time()
 	run(opt, dp)
+	print(f'total runtime: {time.time()-runtime:.5f}')
 
 	"""
 	# train_sizes = range(384, 833, 64)

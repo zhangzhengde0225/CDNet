@@ -239,12 +239,13 @@ if __name__ == '__main__':
 	print(opt)
 	# testset = "/root/datasets/crosswalk/origin_videos/tmp_test"
 	# opt.source = f"{testset}"
-	base_path = "/Users/tanmenglu/Downloads/pretrained_weights/v5mCDexp"
-	exp = "v5mCD640SE300epochexp"
-	opt.weights = f"{base_path}/{exp}/weights/best.pt"
+	# base_path = "/Users/tanmenglu/Downloads/pretrained_weights/v5mCDexp"
+	# exp = "v5mCD640SE300epochexp"
+	# opt.weights = f"{base_path}/{exp}/weights/best.pt"
 	# opt.output = f'{testset}/detected3'
 	opt.use_roi = True
 	opt.img_size = 640
+	opt.weights = f"runs/v5mCD640exp/weights/v5mCD640.pt"
 	run(opt, dp)
 
 	"""

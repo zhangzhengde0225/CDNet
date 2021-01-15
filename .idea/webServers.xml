@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="11e00150-9b42-4f4b-8896-2b7427e45160" name="3080-office (project level)" url="http://47.114.37.111">
+        <fileTransfer host="47.114.37.111" port="55" rootFolder="/home/zzd" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="55" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="TITAN_byy">
+  <component name="PublishConfigData" autoUpload="Always" serverName="3080-office">
     <serverData>
+      <paths name="3080-office">
+        <serverdata>
+          <mappings>
+            <mapping deploy="PycharmProject/CDNet" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="K80-outer">
         <serverdata>
           <mappings>
@@ -23,6 +30,13 @@
         <serverdata>
           <mappings>
             <mapping deploy="/PycharmProject/CDNet" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="tx2">
+        <serverdata>
+          <mappings>
+            <mapping deploy="PycharmProject/CDNet" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

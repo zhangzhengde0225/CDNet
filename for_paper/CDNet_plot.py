@@ -56,7 +56,7 @@ class CDNetPlot(object):
 		plt.ylim(75, 98)
 		# plt.xticks(range(0, 300, 50))
 		# plt.show()
-		plt.savefig('results.png', dip=300, bbox_inches='tight')
+		plt.savefig('results.png', dpi=300, bbox_inches='tight')
 
 
 if __name__ == '__main__':
