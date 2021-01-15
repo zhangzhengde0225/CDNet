@@ -32,7 +32,7 @@ class Conv(nn.Module):
 		return self.act(self.conv(x))
 
 
-class Bottleneck(nn.Module):
+class Bottleneck_back(nn.Module):
 	# Standard bottleneck
 	def __init__(self, c1, c2, shortcut=True, g=1, e=0.5):  # ch_in, ch_out, shortcut, groups, expansion
 		super(Bottleneck, self).__init__()
@@ -45,7 +45,7 @@ class Bottleneck(nn.Module):
 		return x + self.cv2(self.cv1(x)) if self.add else self.cv2(self.cv1(x))
 
 
-class BottleneckSE(nn.Module):
+class Bottleneck(nn.Module):
 	"""
 	添加了SENet的bottleneck
 	"""

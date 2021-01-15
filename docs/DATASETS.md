@@ -1,14 +1,13 @@
 # DATASETS
 
-##### Download datasets for CDNet
 
-**Trainset**
+## Trainset
 + from jbox: [https://jbox.sjtu.edu.cn/l/Z0i6nQ](https://jbox.sjtu.edu.cn/l/Z0i6nQ)
 + or use wget:
 ```python
 wget -c -O train_data_v5_format_3080.tar https://jbox.sjtu.edu.cn:10081/v2/delivery/data/de2ac2610893499686d095f174aa6ffd/?token=
 ```
-**notes**
+**Notes**
 
 Please remove proxy if download failed.
 
@@ -19,7 +18,7 @@ cd train_data_v5_format_3080
 rm labels/*.cache  # if you are the first time to use this datasets.
 
 ```
-The trainsets includes training and verification set, and the file structure uses the format of YOLOv5:
+The trainsets includes training and verification set, and the file structure format is YOLOv5 likes:
 ```python
 |--train_data_v5_format
 --|--images  # the .jpg images
@@ -36,7 +35,7 @@ The trainsets includes training and verification set, and the file structure use
 Each .txt file contains annotations in the form of CLS XC YC W H in each line.
 
 
-**Testsets**
+## Testsets
 + from jbox: [https://jbox.sjtu.edu.cn/l/eHE7vD](https://jbox.sjtu.edu.cn/l/eHE7vD)
 + or use wget:
 ```python

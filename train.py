@@ -6,6 +6,7 @@ import time
 from pathlib import Path
 from random import random
 
+import test
 import numpy as np
 import torch.distributed as dist
 import torch.nn.functional as F
@@ -19,6 +20,7 @@ from torch.utils.tensorboard import SummaryWriter
 from tqdm import tqdm
 
 from models.yolo import Model
+from models.yoloSE import ModelSE
 from utils.datasets import create_dataloader
 from utils.general import (
 	check_img_size, torch_distributed_zero_first, labels_to_class_weights, plot_labels, check_anchors,
@@ -76,8 +78,10 @@ def train(hyp, opt, device, tb_writer=None):
 	init_seeds(2 + rank)
 	with open(opt.data) as f:
 		data_dict = yaml.load(f, Loader=yaml.FullLoader)  # model dict
-	train_path = data_dict['train']
-	test_path = data_dict['val']
+	# train_path = data_dict['train']
+	train_path = f'{opt.trainset_path}/images/train'
+	# test_path = data_dict['val']
+	test_path = f'{opt.trainset_path}/images/test'
 	nc, names = (1, ['item']) if opt.single_cls else (int(data_dict['nc']), data_dict['names'])  # number classes, names
 	assert len(names) == nc, '%g names found for nc=%g dataset in %s' % (len(names), nc, opt.data)  # check
 
@@ -87,7 +91,10 @@ def train(hyp, opt, device, tb_writer=None):
 			os.remove(f)
 
 	# Create model
-	model = Model(opt.cfg, nc=nc).to(device)
+	if opt.useSE:
+		model = ModelSE(opt.cfg, nc=nc).to(device)
+	else:
+		model = Model(opt.cfg, nc=nc).to(device)
 
 	# Image sizes
 	gs = int(max(model.stride))  # grid size (max stride)
@@ -418,6 +425,9 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--cfg', type=str, default='models/yolov5m.yaml', help='model.yaml path')
 	parser.add_argument('--data', type=str, default='data/crosswalk.yaml', help='data.yaml path')
+	parser.add_argument('--trainset_path', type=str, default='/home/zzd/datasets/crosswalk/train_data_v5_format',
+						help='the trainsets path in YOLOv5 format')
+	parser.add_argument('--use-SE', type=bool, default=True, help='whether to YOLOv5 embedded in SE module')
 	parser.add_argument('--hyp', type=str, default='', help='hyp.yaml path (optional)')
 	parser.add_argument('--epochs', type=int, default=100)
 	parser.add_argument('--batch-size', type=int, default=32, help='total batch size for all GPUs')
