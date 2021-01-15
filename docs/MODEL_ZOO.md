@@ -1,6 +1,6 @@
 # MODEL ZOO
 
-## pytorch model
+## Pytorch model
 
 |Model|Model Size|Time(CPU)(ms)|F1 score(%)|Download|
 |:---:|:---:|:---:|:---:|:---:|

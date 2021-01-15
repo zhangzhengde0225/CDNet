@@ -26,8 +26,8 @@ Please check out [docs/INSTALL.md](https://github.com/zhangzhengde0225/CDNet/blo
 # Model Zoo
 Please check out [docs/MODEL_ZOO.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/MODEL_ZOO.md)
 
-
 # Datasets
+Download trainsets and testsets, please check out [docs/DATASETS.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md)
 
 
 # Enviroments
