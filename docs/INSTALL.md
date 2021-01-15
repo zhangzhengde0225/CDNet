@@ -12,21 +12,28 @@ This document describes how to get CNDet source code and configure the running e
 ##### use git:
 ```python
 git clone https://github.com/zhangzhengde0225/CDNet.git
+cd cdnet
 ```
 ##### from github web:
-Browse the [CDnet] repository and Click "Code"-"Download ZIP".
++ Browse the [CDnet] repository
++ Click "Code"-"Download ZIP"
+```python
+unzip CDNet-master.zip
+cd CDNet_master
+```
+
 
 ## Configure Environment
-[anaconda](https://www.anaconda.com) is recommanded.
+[Anaconda](https://www.anaconda.com) is highly recommanded.
 
-Haven't Anaconda been installed yet? Download anaconda installer [here](https://www.anaconda.com/products/individual#Downloads).
+Haven't Anaconda been installed yet? Download anaconda installer [here](https://www.anaconda.com/products/individual#Downloads) and install it:
 ```python
 chmod +x ./Anaconda3-2020.11-Linux-.sh
 ./Anaconda3-2020.11-Linux-.sh  # install
 which conda  # verify installation
 ```
 
-After having CONDA, directly import the fully configured environment:
+After having a CONDA, directly import the fully configured environment:
 ```python
 conda env creat -f conda_cdnet_env.yaml
 ```

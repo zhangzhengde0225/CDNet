@@ -21,9 +21,10 @@ On the basis of [YOLOv5](https://github.com/ultralytics/yolov5), the following t
 
 
 # Installation
-
+Please check out [docs/INSTALL.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/INSTALL.md)
 
 # Model Zoo
+Please check out [docs/MODEL_ZOO.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/MODEL_ZOO.md)
 
 
 # Datasets

@@ -18,7 +18,6 @@ from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.utils.tensorboard import SummaryWriter
 from tqdm import tqdm
 
-import test  # import test.py to get mAP after each epoch
 from models.yolo import Model
 from utils.datasets import create_dataloader
 from utils.general import (
@@ -27,6 +26,7 @@ from utils.general import (
 	get_latest_run, check_git_status, check_file, increment_dir, print_mutation)
 from utils.google_utils import attempt_download
 from utils.torch_utils import init_seeds, ModelEMA, select_device
+
 
 # Hyperparameters
 hyp = {'lr0': 0.01,  # initial learning rate (SGD=1E-2, Adam=1E-3)
@@ -417,9 +417,9 @@ if __name__ == '__main__':
 
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--cfg', type=str, default='models/yolov5m.yaml', help='model.yaml path')
-	parser.add_argument('--data', type=str, default='data/voc_zzd_dy.yaml', help='data.yaml path')
+	parser.add_argument('--data', type=str, default='data/crosswalk.yaml', help='data.yaml path')
 	parser.add_argument('--hyp', type=str, default='', help='hyp.yaml path (optional)')
-	parser.add_argument('--epochs', type=int, default=300)
+	parser.add_argument('--epochs', type=int, default=100)
 	parser.add_argument('--batch-size', type=int, default=16, help='total batch size for all GPUs')
 	parser.add_argument('--img-size', nargs='+', type=int, default=[640, 640], help='train,test sizes')
 	parser.add_argument('--rect', action='store_true', help='rectangular training')
