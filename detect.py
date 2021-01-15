@@ -248,25 +248,4 @@ if __name__ == '__main__':
 	run(opt, dp)
 	print(f'total runtime: {time.time()-runtime:.5f}')
 
-	"""
-	# train_sizes = range(384, 833, 64)
-	test_sizes = range(128, 833, 32)
-	train_sizes = [640]
-	# test_sizes = [832]
-	for roi in [0, 1]:
-		if roi == 0:  # False
-			opt.use_roi = False
-			roistring = 'full'
-		else:
-			opt.use_roi = True
-			roistring = 'roi'
-		print('xxx', roistring)
-		for trs in train_sizes:
-			opt.weights = f"/home/zzd/PycharmProject/book_pytorch/yolov5_zzd/runs/v5mCD{trs}SE300epochexp/weights/best.pt"
-			for tes in test_sizes:
-				opt.output = f"{testset}/dense_ts_{roistring}_SE300epoch_{trs}_{tes}_output"
-				opt.img_size = tes
-				print(trs, tes, roistring)
-				run()
-	"""
 

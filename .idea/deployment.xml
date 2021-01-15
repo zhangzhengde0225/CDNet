@@ -5,7 +5,7 @@
       <paths name="3080-office">
         <serverdata>
           <mappings>
-            <mapping deploy="PycharmProject/CDNet" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="PycharmProject/CDNet" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>
