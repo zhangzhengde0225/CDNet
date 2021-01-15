@@ -420,7 +420,7 @@ if __name__ == '__main__':
 	parser.add_argument('--data', type=str, default='data/crosswalk.yaml', help='data.yaml path')
 	parser.add_argument('--hyp', type=str, default='', help='hyp.yaml path (optional)')
 	parser.add_argument('--epochs', type=int, default=100)
-	parser.add_argument('--batch-size', type=int, default=16, help='total batch size for all GPUs')
+	parser.add_argument('--batch-size', type=int, default=32, help='total batch size for all GPUs')
 	parser.add_argument('--img-size', nargs='+', type=int, default=[640, 640], help='train,test sizes')
 	parser.add_argument('--rect', action='store_true', help='rectangular training')
 	parser.add_argument('--resume', nargs='?', const='get_last', default='',
