@@ -2,10 +2,11 @@ Paper CDNet: [link](link)
 
 This repository represents Crosswalk Detection Network (CDNet), which is a specific implementation of crosswalk (zebra crossing) detection and vehicle crossing behavior analysis under the vision of vehicle-mounted camera. 
 
-The project solves the problem of high robustness detection and analysis of crosswalkd in complex scenes, such as reflection after rain, occluded, distorted, truncated, damaged, view blocked, dazzling, partially lost and so on.
+The project solves the problem of high robustness detection and analysis of crosswalk in complex realistic scenarios, as shown below: 
 
 ![Crosswalk detection in complex realistic scenarios](https://github.com/zhangzhengde0225/CDNet/blob/master/data/crosswalk%20detection%20in%20complex%20realistic%20scenarios.jpg)
 
+**(a)clearly visible, (b)reflection after rain, (c)occluded by a wiper, (d)distorted, (e)truncated in steering, (f)visible at night, (g)damaged, (h)view blocked by vehicles, (i)dazzling and (j)partially lost.**
 
 On the basis of [YOLOv5](https://github.com/ultralytics/yolov5), the following technologies are proposed and applied to further improve the speed and accuracy of low computing power devices in crosswalk detection task:
 
@@ -17,9 +18,7 @@ On the basis of [YOLOv5](https://github.com/ultralytics/yolov5), the following t
 # News!
 + Jan 2021: [1.0.1 version]() of CDNet is released! It achieves xxx% and 94.72% F1_score of crosswalk detection and vehicle crossing behavior analyse on [Crosswalk testsets](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md) with 86 ms (on i7-4770HQ CPU) and 3.1 ms (on RTX 3080 GPU) inference time
 
-# Results
 
-![Detection results compare to YOLOv5](https://github.com/zhangzhengde0225/CDNet/blob/master/data/Detection%20results%20compare%20to%20YOLOv5.jpg)
 
 
 # Installation
@@ -70,6 +69,12 @@ The main optional arguments:
 
 For more details, please refer to [docs/INSTALL.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/INSTALL.md) and [docs/DATASETS.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md).
 
+
+# Results
+
+![Detection results compare to YOLOv5](https://github.com/zhangzhengde0225/CDNet/blob/master/data/Detection%20results%20compare%20to%20YOLOv5.jpg)
+
+**CPU inference time measures per image with i7-4770HQ@2.2GHz CPU on Macbook Pro 2014.**
 
 # Contributors
 CDNet is authored by Zhengde Zhang, Menglu Tan, Zhicai Lan, Haichun Liu, Ling Pei and Wenxian Yu, Zhengde Zhang and Wenxin Yu is the corresponding author.
