@@ -19,6 +19,8 @@ On the basis of [YOLOv5](https://github.com/ultralytics/yolov5), the following t
 
 # Results
 
+![Detection results compare to YOLOv5](https://github.com/zhangzhengde0225/CDNet/blob/master/data/Detection%20results%20compare%20to%20YOLOv5.jpg)
+
 
 # Installation
 Get CDNet code and configure the environment, please check out [docs/INSTALL.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/INSTALL.md)

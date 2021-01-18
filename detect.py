@@ -33,8 +33,6 @@ def detect(opt, dp, save_img=False):
 
 	# Load model
 	model = attempt_load(weights, map_location=device)  # load FP32 model
-	print(model)
-	exit()
 	imgsz = check_img_size(imgsz, s=model.stride.max())  # check img_size 如果不是32的倍数，就向上取整调整至32的倍数并答应warning
 
 	if half:
