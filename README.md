@@ -16,7 +16,7 @@ On the basis of [YOLOv5](https://github.com/ultralytics/yolov5), the following t
 + SSVM (Slide receptive field Short-term Vectors Memory)
 
 # News!
-+ Jan 2021: [1.0.1 version]() of CDNet is released! It achieves xxx% and 94.72% F1_score of crosswalk detection and vehicle crossing behavior analyse on [Crosswalk testsets](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md) with 86 ms (on i7-4770HQ CPU) and 3.1 ms (on RTX 3080 GPU) inference time
++ Jan 2021: [1.0.1 version](https://github.com/zhangzhengde0225/CDNet) of CDNet is released! It achieves xxx% and 94.72% F1_score of crosswalk detection and vehicle crossing behavior analyse on [Crosswalk testsets](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md) with 86 ms (on i7-4770HQ CPU) and 3.1 ms (on RTX 3080 GPU) inference time.
 
 
 
@@ -31,11 +31,12 @@ Please check out [docs/MODEL_ZOO.md](https://github.com/zhangzhengde0225/CDNet/b
 Download trainsets and testsets, please check out [docs/DATASETS.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md)
 
 # Quick Start
-##Training
+## Training
 
 Once you get the CDNet code, configure the environment and download the dataset, juse type:
 ```
-python train.py --trainset_path /path/to/trainset/folder (such as: /home/xxx/datasets/train_data_yolov5_format) 
+python train.py --trainset_path /path/to/trainset/folder
+(such as: /home/xxx/datasets/train_data_yolov5_format) 
 ```
 The training results and weights will be saved in runs/expxx/ directory.
 
