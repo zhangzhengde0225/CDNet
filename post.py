@@ -7,6 +7,8 @@ import cv2
 import numpy as np
 import yaml
 import copy
+from pathlib import Path
+import re
 
 __author__ = 'zhangzhengde@mail.sjtu.edu.cn'
 __date__ = '20200929'
@@ -46,7 +48,7 @@ class DmPost(object):
 		return None, ft, -ft
 
 	def init_logo(self):
-		logo_path = "others/SHNAVI.jpg"
+		logo_path = "settings/SHNAVI.jpg"
 		logo = cv2.imread(logo_path)
 		imgs = [x for x in os.listdir(self.opt.source) if x.endswith('jpg') or x.endswith('png')]
 		if len(imgs) == 0:
@@ -60,7 +62,7 @@ class DmPost(object):
 		return logo
 
 	def init_rect(self):
-		rect = cv2.imread("others/rect.jpg")
+		rect = cv2.imread("settings/rect.jpg")
 		rect_resized_size = (self.logo.shape[1], 200)
 		rect = cv2.resize(rect, rect_resized_size, interpolation=cv2.INTER_LINEAR)
 		return rect
@@ -97,7 +99,14 @@ class DmPost(object):
 		vectors = self.vetors
 
 		# 0000 0001 0002 0003 and so on # 1 2 3 4 ....
-		fileorder = int(filename.split('.')[0].split('_')[-1]) if filename.endswith('jpg') else int(filename.split('_')[-1])
+		try:
+			fs = Path(filename).stem.split('_')[-1]
+			fileorder = int(re.findall('(\d+)', fs)[-1])
+		except Exception as e:
+			raise NameError(
+				f'Filename error: {filename}. Please make sure that the image name contains the frame order, '
+				f'which can be separated by any letter or "_". '
+				f'Such as: 00001.jpg, 0001.jpg, filename_0001.jpg, filename0001.jpg, xx_filename0001.jpg')
 
 		# 绘制上下控制线
 		# cl = opt.control_line  # control line, [360, 700]
@@ -208,18 +217,18 @@ class DmPost(object):
 		# 计数，vectors有值、向量经过中间线、当前vector不为None时，count+1
 		crossout[index, 6] = crossout[index - 1, 6]  # 先同步count与前一个相同
 		# print(self.old_fileorder, int(crossout[index, 2]))
-		if vt.shape[0] != 0:
-			# print(vt.shape)
-			if vt[0, 1] < np.mean(cl):
-				intersect = vt[vt[:, 1] > middle[0][1]]
+		if vt.shape[0] != 0:  # 非空就有可能过线，空不可能过线。
+			# print(vt.shape)  # (n, 2), n是矢量的n个点，2是像素坐标x, y
+			if vt[0, 1] < np.mean(cl):  # 起点在控制线上方才行
+				intersect = vt[vt[:, 1] > middle[0][1]]  # 所有y坐标大于cl的点
 				# 仅使用交叉数目等于1有个问题，如果前一帧刚刚交叉，后一帧抖动回去，又会计入一次，添加条件inter2
-				intersect2 = vt[-1, 1] > middle[0][1]
+				intersect2 = vt[-1, 1] > middle[0][1]  # 最后一个交叉点
 				# print('inter', intersect)
 				# print(vt, intersect, intersect2)
 				if intersect.shape[0] == 1 and vector is not None and intersect2:
 					# 添加抖动保护机制，本次计数的帧与上一次相比小于10帧时(对应于2s)，把当前的vectors与上一个vectors组合起来，
 					c_fileorder = int(crossout[index, 2])
-					if (c_fileorder - self.old_fileorder) <= self.frame_thresh:
+					if (c_fileorder - self.old_fileorder) < self.frame_thresh:  # 10
 						print('\nxxx', c_fileorder, self.old_fileorder, self.frame_thresh)
 						vto = self.old_vectors[self.old_vectors[:, 0] != -2].astype(np.int)
 						new_vt = np.concatenate((vto, vt), axis=0)
@@ -227,7 +236,9 @@ class DmPost(object):
 						vectors[:new_vt.shape[0], :] = new_vt
 					else:
 						crossout[index, 6] += 1  # count+1
-						prt_str = f'\n{filename} count+1, conf: {crosswalk[0, 4]:.2f} count: {int(crossout[index, 6])}'
+						prt_str = \
+							f'\nThe vehicle crossed a crosswalk in {filename}!! count+1, conf: {crosswalk[0, 4]:.2f}, ' \
+							f'current count: {int(crossout[index, 6])}.'
 						print(prt_str)
 						os.system(f'echo "{prt_str}" >> {opt.output}/detect.log')
 						self.old_fileorder = copy.deepcopy(c_fileorder)

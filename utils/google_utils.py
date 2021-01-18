@@ -10,7 +10,7 @@ from pathlib import Path
 def attempt_download(weights):
     # Attempt to download pretrained weights if not found locally
     weights = weights.strip().replace("'", '')
-    msg = weights + ' missing, try downloading from https://drive.google.com/drive/folders/1Drs_Aiu7xx6S-ix95f9kNsA6ueKRpN2J'
+    msg = weights + ' missing, try downloading from https://github.com/zhangzhengde0225/CDNet/blob/master/docs/MODEL_ZOO.md'
 
     r = 1  # return
     if len(weights) > 0 and not os.path.isfile(weights):

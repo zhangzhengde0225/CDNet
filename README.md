@@ -15,7 +15,7 @@ On the basis of [YOLOv5](https://github.com/ultralytics/yolov5), the following t
 + SSVM (Slide receptive field Short-term Vectors Memory)
 
 # News!
-+ Jan 2021: [1.0.1 version]() of CDNet is released! It achieves 94.72% F1_score on [Crosswalk testsets](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md) with 86 ms (on i7-4770HQ CPU) and 3.1 ms (on RTX 3080 GPU) inference time
++ Jan 2021: [1.0.1 version]() of CDNet is released! It achieves xxx% and 94.72% F1_score of crosswalk detection and vehicle crossing behavior analyse on [Crosswalk testsets](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md) with 86 ms (on i7-4770HQ CPU) and 3.1 ms (on RTX 3080 GPU) inference time
 
 # Results
 
@@ -30,30 +30,43 @@ Please check out [docs/MODEL_ZOO.md](https://github.com/zhangzhengde0225/CDNet/b
 Download trainsets and testsets, please check out [docs/DATASETS.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md)
 
 # Quick Start
-**Training**
+##Training
 
 Once you get the CDNet code, configure the environment and download the dataset, juse type:
-```python
-python train.py \
---trainset_path /path/to/trainset/folder(such as: /home/xxx/datasets/train_data_yolov5_format) \
---device "0, 1" \ # cpu or gpu id, "0, 1" means use two gpu to train.
---img-size 640 \
---batch-size 32 \
---epochs 100 \
---use-SE True  # use SE module embedded YOLOv5
+```
+python train.py --trainset_path /path/to/trainset/folder (such as: /home/xxx/datasets/train_data_yolov5_format) 
+```
+The training results and weights will be saved in runs/expxx/ directory.
+
+The main optional arguments:
+```
+--device "0, 1"  # cpu or gpu id, "0, 1" means use two gpu to train.
+--img-size 640 
+--batch-size 32 
+--epochs 100 
+--not-use-SE  # use original YOLOv5 which not SE-module embedded if there is the flag
 ```
 
-**Inference**: Inference images
-```python
-python detect.py \
---
+## Inference
+Detect the crosswalk image by image and analyze the vehicle crossing behavior. 
 ```
-**Validation**: Repreduce the results on paper
-```python
-python validation.py --
+python detect.py
 ```
 
-For more details, please refer to [GETTING_STARTED.md]().
+
+The main optional arguments:
+```
+--source example/images  # images dir
+--output example/output  # output dir
+--img-size 640  # inference model size
+--device "0"   # use cpu or gpu(gpu id)
+--plot-classes ["crosswalk"]  # plot classes
+--field-size 5  # the Slide receptive field size of SSVM 
+--not-use-roi  # not use roi for accelerate inference speed if there is the flag
+--not-use-ssvm  # not use ssvm method for analyse vehicle crossing behavior if there is the flag
+```
+
+For more details, please refer to [docs/INSTALL.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/INSTALL.md) and [docs/DATASETS.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md).
 
 
 # Contributors
@@ -62,9 +75,12 @@ CDNet is authored by Zhengde Zhang, Menglu Tan, Zhicai Lan, Haichun Liu, Ling Pe
 Currently, it is maintained by Zhengde Zhang (zhangzhengde@mail.sjtu.edu.cn)
 
 # Citation
-
+```
+xxx
+```
 
 # License
+
 
 
 

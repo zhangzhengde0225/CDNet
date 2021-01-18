@@ -98,7 +98,7 @@ def detect(opt, dp, save_img=False):
 		# Apply NMS
 		pred = non_max_suppression(pred, opt.conf_thres, opt.iou_thres, classes=opt.classes, agnostic=opt.agnostic_nms)
 		t2 = time_synchronized()
-		print(f'zzd {t2-t1:.4f}s ', end='')
+		print(f'infer time:{t2-t1:.4f}s ', end='')
 		time_list[iii] = t2-t1
 
 		# print('\n', len(pred), pred, recover)  # list 长度是bs，代表每张图, 元素tensor，代表检测到的目标，每个tensor.shape [n, 6] xy4, conf, cls
@@ -193,8 +193,8 @@ def detect(opt, dp, save_img=False):
 
 	print('Done. (%.3fs)' % (time.time() - t0))
 	time_arr = np.array(time_list)
-	prnt = f'{np.mean(time_arr):.5f}s {1/np.mean(time_arr):.4f}FPS'
-	print(f'\n {opt.img_size} {prnt}')
+	prnt = f'Done. Network mean inference time: {np.mean(time_arr):.5f}s,  Mean FPS: {1/np.mean(time_arr):.4f}.'
+	print(f'\nModel size {opt.img_size} inference {prnt}')
 	os.system(f'echo "{prnt}" >> {opt.output}/detect.log')
 	os.system(f'echo "useroi {opt.img_size} {prnt}" >> detect2.log')
 
@@ -211,11 +211,12 @@ def run(opt, dp):
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--weights', nargs='+', type=str, default='v5m2cls.pt',
-						help='model.pt path(s)')
+	parser.add_argument('--weights', nargs='+', type=str, required=False,
+						default='runs/SEYOLOv5m_ep100_exp/weights/best.pt',
+						help='trained model path model.pt ddpath(s)')
 	parser.add_argument('--source', type=str, default='example/images', help='source')  # file/folder, 0 for webcam
 	parser.add_argument('--output', type=str, default='example/output', help='output folder')  # output folder
-	parser.add_argument('--img-size', type=int, default=1280, help='inference size (pixels)')
+	parser.add_argument('--img-size', type=int, default=640, help='inference size (pixels)')
 	parser.add_argument('--conf-thres', type=float, default=0.4, help='object confidence threshold')
 	parser.add_argument('--iou-thres', type=float, default=0.5, help='IOU threshold for NMS')
 	parser.add_argument('--device', default='0', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
@@ -225,27 +226,24 @@ if __name__ == '__main__':
 	parser.add_argument('--agnostic-nms', action='store_true', help='class-agnostic NMS')
 	parser.add_argument('--augment', action='store_true', help='augmented inference')
 	parser.add_argument('--update', action='store_true', help='update all models')
-	parser.add_argument('--control_line_setting', type=str, default='detect/cl_setting.yaml', help='control line setting')
-	parser.add_argument('--select_control_line', type=str, default='general', help='select which control line. i.e. general, 0036')
-	parser.add_argument('--field_size', type=int, default=5, help='receptive filed size for post')
-	parser.add_argument('--plot_classes', type=list, default=['crosswalk'], help='specifies which classes will be drawn')
-	parser.add_argument('--use_roi', type=bool, default=False, help='use roi to accelerate inference speed')
+	parser.add_argument('--control-line-setting', type=str, default='settings/cl_setting.yaml', help='control line setting')
+	parser.add_argument('--select-control-line', type=str, default='general', help='select which control line. i.e. general, 0036')
+	parser.add_argument('--field-size', type=int, default=5, help='receptive filed size for post')
+	parser.add_argument('--plot-classes', type=list, default=['crosswalk'], help='specifies which classes will be drawn')
+	parser.add_argument('--not-use-roi', action='store_true',
+						help='not use roi for accelerate inference speed if there is the flag')
+	parser.add_argument('--not-use-ssvm', action='store_true',
+						help='not use ssvm method for analyse vehicle crossing behavior if there is the flag')
 
 	opt = parser.parse_args()
+	opt.use_roi = not opt.not_use_roi
+	opt.use_ssvm = not opt.not_use_ssvm
 
-	opt.select_control_line = '05_0823'
 	dp = post.DmPost(opt)
 
 	print(opt)
-	# testset = "/root/datasets/crosswalk/origin_videos/tmp_test"
-	# opt.source = f"{testset}"
-	# base_path = "/root/PycharmProject/book_pytorch/yolov5_zzd/runs"
-	# exp = "v5mCD640exp"
-	# opt.weights = f"{base_path}/{exp}/weights/best.pt"
-	opt.weights = f"runs/v5mCD640exp/weights/v5mCD640.pt"
-	# opt.output = f'{testset}/detected3'
 	runtime = time.time()
 	run(opt, dp)
-	print(f'total runtime: {time.time()-runtime:.5f}')
+	print(f'Total runtime: {time.time()-runtime:.5f}')
 
 
