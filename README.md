@@ -64,8 +64,8 @@ The main optional arguments:
 --device "0"   # use cpu or gpu(gpu id)
 --plot-classes ["crosswalk"]  # plot classes
 --field-size 5  # the Slide receptive field size of SSVM 
---not-use-roi  # not use roi for accelerate inference speed if there is the flag
---not-use-ssvm  # not use ssvm method for analyse vehicle crossing behavior if there is the flag
+--not-use-ROI  # not use roi for accelerate inference speed if there is the flag
+--not-use-SSVM  # not use ssvm method for analyse vehicle crossing behavior if there is the flag
 ```
 
 For more details, please refer to [docs/INSTALL.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/INSTALL.md) and [docs/DATASETS.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md).

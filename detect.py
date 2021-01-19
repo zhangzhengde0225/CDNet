@@ -212,7 +212,7 @@ def run(opt, dp):
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--weights', nargs='+', type=str, required=False,
-						default='runs/SEYOLOv5m_ep100_exp/weights/best.pt',
+						default='runs/SEYOLOv5m_ep300_exp/weights/best.pt',
 						help='trained model path model.pt ddpath(s)')
 	parser.add_argument('--source', type=str, default='example/images', help='source')  # file/folder, 0 for webcam
 	parser.add_argument('--output', type=str, default='example/output', help='output folder')  # output folder
@@ -230,17 +230,20 @@ if __name__ == '__main__':
 	parser.add_argument('--select-control-line', type=str, default='general', help='select which control line. i.e. general, 0036')
 	parser.add_argument('--field-size', type=int, default=5, help='receptive filed size for post')
 	parser.add_argument('--plot-classes', type=list, default=['crosswalk'], help='specifies which classes will be drawn')
-	parser.add_argument('--not-use-roi', action='store_true',
+	parser.add_argument('--not-use-ROI', action='store_true',
 						help='not use roi for accelerate inference speed if there is the flag')
-	parser.add_argument('--not-use-ssvm', action='store_true',
+	parser.add_argument('--not-use-SSVM', action='store_true',
 						help='not use ssvm method for analyse vehicle crossing behavior if there is the flag')
 
 	opt = parser.parse_args()
-	opt.use_roi = not opt.not_use_roi
-	opt.use_ssvm = not opt.not_use_ssvm
+	opt.use_roi = not opt.not_use_ROI
+	opt.use_ssvm = not opt.not_use_SSVM
+
+	opt.source = "/home/zzd/datasets/crosswalk/testsets_1770/Images"
+	opt.output = "/home/zzd/datasets/crosswalk/testsets_1770/SEv5m_300EP_roi"
+	# opt.use_roi =
 
 	dp = post.DmPost(opt)
-
 
 	print(opt)
 	runtime = time.time()

@@ -5,10 +5,10 @@
 import os
 import numpy as np
 
-import torch
 import time
 from PIL import Image
 from pathlib import Path
+import re
 
 
 class GetConfusingMatrix(object):
@@ -230,15 +230,16 @@ if __name__ == "__main__":
 	head = f"trs tes {'ALL':<5}{'TP':<5}{'FP':<5}{'FN':<5}{'TN':<5} thr acc   P     R     TNR   F1    {'time':<7} fps\n"
 	ret_all.append(head)
 	train_sizes = [640]
-	test_sizes = range(128, 833, 32)
+	test_sizes = range(128, 160, 32)
 	for trs in train_sizes:  # train_size
 		for tes in test_sizes:  # test_size
 			v5_out = f"{path}/dense_ts_roi_SE300epoch_{trs}_{tes}_output"
+			v5_out = f'{path}/SEv5m_300EP_no_roi'
 			ret = GCM.analyse(thresh=0.5, v5_out=v5_out, pn_dir=path)
 			# 读取inference时间
 			with open(f'{v5_out}/detect.log', 'r') as f:
 				log = f.readlines()
-			time, fps = log[-1].split()
+			time, fps = re.findall(f'\d+.\d+', log[-1])
 			time = time[:-1]
 			fps = fps[:-3]
 			ret_all.append(f'{trs} {tes} {ret} {time} {fps}\n')
