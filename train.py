@@ -95,6 +95,10 @@ def train(hyp, opt, device, tb_writer=None):
 		model = Model(opt.cfg, nc=nc).to(device)
 	else:
 		model = ModelSE(opt.cfg, nc=nc).to(device)
+
+	print(model)
+	exit()
+
 	# Image sizes
 	gs = int(max(model.stride))  # grid size (max stride)
 	imgsz, imgsz_test = [check_img_size(x, gs) for x in opt.img_size]  # verify imgsz are gs-multiples
@@ -426,7 +430,7 @@ if __name__ == '__main__':
 	parser.add_argument('--data', type=str, default='data/crosswalk.yaml', help='data.yaml path')
 	parser.add_argument('--trainset_path', type=str, default='/home/zzd/datasets/crosswalk/train_data_v5_format',
 						help='the trainsets path in YOLOv5 format')
-	parser.add_argument('--not-use-SE', action='store_true', help='whether to YOLOv5 embedded in SE module')
+	parser.add_argument('--not-use-SE', action='store_false', help='whether to YOLOv5 embedded in SE module')
 	parser.add_argument('--hyp', type=str, default='', help='hyp.yaml path (optional)')
 	parser.add_argument('--epochs', type=int, default=100)
 	parser.add_argument('--batch-size', type=int, default=32, help='total batch size for all GPUs')
@@ -449,6 +453,7 @@ if __name__ == '__main__':
 	parser.add_argument('--sync-bn', action='store_true', help='use SyncBatchNorm, only available in DDP mode')
 	parser.add_argument('--local_rank', type=int, default=-1, help='DDP parameter, do not modify')
 	opt = parser.parse_args()
+
 
 	# Resume
 	last = get_latest_run() if opt.resume == 'get_last' else opt.resume  # resume from most recent run

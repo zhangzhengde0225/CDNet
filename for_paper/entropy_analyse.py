@@ -17,19 +17,23 @@ class EntropyAnalyse(object):
 	def run(self):
 
 		e = self.get_error_rate(out_path=self.out_1cls_640)
-		print(e)
-		exit()
+		# print(e)
+		# exit()
 		# 第一步，读取概率
-		P1cls = self.get_P_from_label(path=self.lb_1cls)
 		P2cls = self.get_P_from_label(path=self.lb_2cls)
+		H2 = self.cal_information_entropy(P2cls)
+		print(H2)
+		exit()
+		P1cls = self.get_P_from_label(path=self.lb_1cls)
+
 
 		# P = np.array([0.1, 0.9, 0])
 		H1 = self.cal_information_entropy(P1cls)  # 熵
-		H2 = self.cal_information_entropy(P2cls)
+
 		print(H1, H2)
 
 		# 统计在1cls中误检为crosswalk的数目，分288和640
-
+		
 
 
 	def get_error_rate(self, out_path):
@@ -49,7 +53,7 @@ class EntropyAnalyse(object):
 				assert len(classes_ga) == 1
 				classes2 = self.read_txt(f'{out_path}/{txt}')
 				classes2 = [] if classes2 is None else classes2
-				print(classes, classes2, both)
+				# print(classes, classes2, both)
 				error[0] += 1
 
 				if not both and '0' in classes2:
@@ -58,8 +62,6 @@ class EntropyAnalyse(object):
 					print(f'{txt} 标注了2个，且有GA，检测出大于2个 {classes} {classes2}')
 					error[1] += 1
 				print(f'[{i+1:>2}/{len(txts)}] {error} {out_path}/{txt}')
-
-		exit()
 
 		return 0
 
@@ -92,7 +94,6 @@ class EntropyAnalyse(object):
 		P = P/np.sum(P)
 		print(P)
 		return P
-
 
 	def cal_information_entropy(self, P):
 		"""

@@ -16,9 +16,9 @@
 
 CPU inference time measures per image with **i7-4770HQ**@2.2GHz CPU on Macbook Pro 2014.
 
-Nano inference time measures per image on **Jetson Nano** (4GB) with JetPack-4.4, cuda-10.2 and TensorRT-7.1.3.
+Nano inference time measures per image (FP16) on **Jetson Nano** (4GB) with JetPack-4.4, cuda-10.2 and TensorRT-7.1.3.
 
-We also tested the GPU inference time on **RTX 3080** using [TensorRT](https://developer.nvidia.com/tensorRt), and the result shows the it is about 3.1ms per image.
+We also tested the GPU inference time on **RTX 3080** using [TensorRT](https://developer.nvidia.com/tensorRt), and the result shows the it is about 3.1ms per image (FP16).
 
 Note that TensorRT is optimized for specific TensorRT version, CUDA version and hardware, so the engine downloaded from this page can only be used on Jetson Nano with specific package installed.
 

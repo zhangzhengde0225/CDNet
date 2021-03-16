@@ -212,7 +212,7 @@ def run(opt, dp):
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--weights', nargs='+', type=str, required=False,
-						default='runs/SEYOLOv5m_ep300_exp/weights/best.pt',
+						default='runs/YOLOv5m_ep300_exp/weights/best.pt',
 						help='trained model path model.pt ddpath(s)')
 	parser.add_argument('--source', type=str, default='example/images', help='source')  # file/folder, 0 for webcam
 	parser.add_argument('--output', type=str, default='example/output', help='output folder')  # output folder

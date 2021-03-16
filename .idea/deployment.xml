@@ -5,38 +5,7 @@
       <paths name="3080-office">
         <serverdata>
           <mappings>
-            <mapping deploy="PycharmProject/CDNet" local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="K80-outer">
-        <serverdata>
-          <mappings>
-            <mapping deploy="PycharmProject/CDNet" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-          <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/pretrained" />
-          </excludedPaths>
-        </serverdata>
-      </paths>
-      <paths name="TITAN-dy">
-        <serverdata>
-          <mappings>
             <mapping deploy="/PycharmProject/CDNet" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="TITAN_byy">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/PycharmProject/CDNet" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="tx2">
-        <serverdata>
-          <mappings>
-            <mapping deploy="PycharmProject/CDNet" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

@@ -18,11 +18,15 @@ c = [
 	'lightcoral', 'limegreen', 'royalblue', 'orange', 'mediumorchid',
 	'deepskyblue', 'gold', 'fuchsia',
 	'sandybrown', 'cyan']
+c = [
+	'black', 'lightcoral', 'limegreen', 'royalblue', 'orange', 'mediumorchid',
+	'deepskyblue', '#EE3B3B', 'gold', 'fuchsia',
+	'sandybrown', 'cyan']
 
 
 class CDNetPlot(object):
 	def __init__(self):
-		self.data = self.load_data('data/results.yaml')
+		self.data = self.load_data('data/results_2.yaml')
 
 	def load_data(self, path):
 		with open(path, 'r') as f:
@@ -34,29 +38,34 @@ class CDNetPlot(object):
 		for i, k in enumerate(d.keys()):
 			v = [float(x) for x in d[k].split()]
 			print(k, v, type(v))
-			x = np.array([v[0], v[2]]).astype(np.float)
-			y = np.array([v[1], v[3]]).astype(np.float)
+			x = np.array([v[0], v[2]]).astype(np.float32)
+			y = np.array([v[1], v[3]]).astype(np.float32)
+			# 划线
+			lb = '$\mathbf{'+k+'}$'
 			plt.plot(
-				x, y, ls='-', label=k, c=c[i], linewidth=3,
-				marker='o', markersize=10)
+				x, y, ls='-', label=lb, c=c[i], linewidth=3,
+				marker='', markersize=10)
+			# 画点288
+			plt.plot(v[0], v[1], marker='^', c=c[i], markersize=15)
+			plt.plot(v[2], v[3], marker='s', c=c[i], markersize=15)
 			# 添加额外的标签
-			if True:
+			if False:
 				if i == 0:
 					plt.text(v[0]-12, v[1]-1.5, '288', size=16)
 					plt.text(v[2] - 12, v[3] - 1.5, '640', size=16)
 
 		fontdict = {'size': 18, 'weight': 'bold'}
-		plt.legend(loc='best')
+		plt.legend(loc=2, bbox_to_anchor=(1.0, 1.0), borderaxespad=0.)
 		plt.grid()
-		plt.xlabel('CPU Speed (ms/img)', fontdict=fontdict)
-		plt.ylabel('F1$\mathbf{_{score}}$ (%)', fontdict=fontdict)
-		plt.xticks(range(0, 701, 100), size=12, weight='bold')
-		plt.xlim(50, 700)
-		plt.yticks(range(75, 101, 5), size=12, weight='bold')
-		plt.ylim(75, 98)
+		plt.xlabel('Detection Speed (FPS)', fontdict=fontdict)
+		plt.ylabel('F1 score (%)', fontdict=fontdict)
+		plt.xticks(range(0, 100, 5), size=12, weight='bold')
+		plt.xlim(1, 42)
+		plt.yticks(range(60, 101, 5), size=12, weight='bold')
+		plt.ylim(77, 98)
 		# plt.xticks(range(0, 300, 50))
 		# plt.show()
-		plt.savefig('results.png', dpi=300, bbox_inches='tight')
+		plt.savefig('results.png', dpi=2000, bbox_inches='tight')
 
 
 if __name__ == '__main__':
