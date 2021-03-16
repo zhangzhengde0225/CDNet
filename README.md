@@ -2,13 +2,17 @@ Paper CDNet: [link](link)
 
 This repository represents Crosswalk Detection Network (CDNet), which is a specific implementation of crosswalk (zebra crossing) detection and vehicle crossing behavior analysis under the vision of vehicle-mounted camera. 
 
-The project solves the problem of high robustness detection and analysis of crosswalk in complex realistic scenarios, as shown below: 
+![graphical abstract](https://github.com/zhangzhengde0225/CDNet/blob/master/data/graphical_abstract.jpg)
 
-![Crosswalk detection in complex realistic scenarios](https://github.com/zhangzhengde0225/CDNet/blob/master/data/crosswalk%20detection%20in%20complex%20realistic%20scenarios.jpg)
+# Highlights
++ A crosswalk detection and vehicle crossing behavior detection network is realized.
++ The accuracy and speed exceed YOLOv5 in the specific task.
++ High robustness in real complex scenarios such as in cloudy, sunny, rainy and at night is achieved.
++ Real-time detection (33.1 FPS) is implemented on Jetson nano edge-computing device.
++The datasets, tutorials and source codes are available on GitHub.
+  
 
-**(a)clearly visible, (b)reflection after rain, (c)occluded by a wiper, (d)distorted, (e)truncated in steering, (f)visible at night, (g)damaged, (h)view blocked by vehicles, (i)dazzling and (j)partially lost.**
-
-On the basis of [YOLOv5](https://github.com/ultralytics/yolov5), the following technologies are proposed and applied to further improve the speed and accuracy of low computing power devices in crosswalk detection task:
+On the basis of [YOLOv5](https://github.com/ultralytics/yolov5), the following technologies are proposed to improve the speed and accuracy :
 
 + SENet (Squeeze-and-Excitation Network)
 + NST (Negative Samples Training)
@@ -16,10 +20,8 @@ On the basis of [YOLOv5](https://github.com/ultralytics/yolov5), the following t
 + SSVM (Slide receptive field Short-term Vectors Memory)
 
 # News!
-+ Jan 2021: [1.0.1 version](https://github.com/zhangzhengde0225/CDNet) of CDNet is released! It achieves xxx% and 94.72% F1_score of crosswalk detection and vehicle crossing behavior analyse on [Crosswalk testsets](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md) with 86 ms (on i7-4770HQ CPU) and 3.1 ms (on RTX 3080 GPU) inference time.
-
-
-
++ Jan 2021: [1.0.1 version](https://github.com/zhangzhengde0225/CDNet) of CDNet is released! 
+  With a detection speed of 33.1 FPS on Jetson nano, it obtained an average F1 score of 94.72% in the complex scenarios.
 
 # Installation
 Get CDNet code and configure the environment, please check out [docs/INSTALL.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/INSTALL.md)
@@ -55,7 +57,6 @@ Detect the crosswalk image by image and analyze the vehicle crossing behavior.
 python detect.py
 ```
 
-
 The main optional arguments:
 ```
 --source example/images  # images dir
@@ -75,10 +76,11 @@ For more details, please refer to [docs/INSTALL.md](https://github.com/zhangzhen
 
 ![Detection results compare to YOLOv5](https://github.com/zhangzhengde0225/CDNet/blob/master/data/Detection%20results%20compare%20to%20YOLOv5.jpg)
 
-**CPU inference time measures per image with i7-4770HQ@2.2GHz CPU on Macbook Pro 2014.**
+**The square dots denote detection size of 640, while triangle dots denote 288.**
+**The detection speed measured on the NVIDIA edge computing device Jetson nano.**
 
 # Contributors
-CDNet is authored by Zhengde Zhang, Menglu Tan, Zhicai Lan, Haichun Liu, Ling Pei and Wenxian Yu, Zhengde Zhang and Wenxin Yu is the corresponding author.
+CDNet is authored by Zhengde Zhang, Menglu Tan, Zhicai Lan, Haichun Liu, Ling Pei and Wenxian Yu.
 
 Currently, it is maintained by Zhengde Zhang (drivener@163.com).
 
