@@ -82,7 +82,7 @@ For more details, please refer to [docs/INSTALL.md](https://github.com/zhangzhen
 # Contributors
 CDNet is authored by Zhengde Zhang, Menglu Tan, Zhicai Lan, Haichun Liu, Ling Pei and Wenxian Yu.
 
-Currently, it is maintained by Zhengde Zhang (drivener@163.com).
+Currently, it is maintained by Zheng-De Zhang (drivener@163.com).
 
 # Citation
 ```
