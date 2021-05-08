@@ -4,7 +4,7 @@
 
 |Model|Detect Size|Speed (FPS)|F1 Score (%)|Pytorch Model|TensorRT Engine|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|YOLOv5m|288x192|20.0|81.34|[Download](https://pan.baidu.com/s/1FCW5urZynjXjteR1E_2XuA) passwd: **duap**|[Download](link)
+|YOLOv5m (baseline)|288x192|20.0|81.34|[Download](https://pan.baidu.com/s/1FCW5urZynjXjteR1E_2XuA) passwd: **duap**|[Download](link)
 |SE-YOLOv5m+NST+ROI+SSVM (CDNet)|288X192|33.1|94.72|[Download](https://pan.baidu.com/s/18p2TS-x830X7IUAVsdihow) passwd: **1cpp**|[Download](link)
 
 **Notes**
