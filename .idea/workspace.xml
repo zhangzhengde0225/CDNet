@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98ee5719-0d67-4120-a53f-27e008b8c3b4" name="Default" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/CrosswalkDetectionNet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CrosswalkDetectionNet.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/DATASETS.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DATASETS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for_paper/CDNet_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/for_paper/CDNet_plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Detection results compare to YOLOv5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/Detection results compare to YOLOv5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Detection results compare to YOLOv5_bak.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,7 +379,7 @@
       <workItem from="1617287074587" duration="111000" />
       <workItem from="1618993548295" duration="1153000" />
       <workItem from="1619319797442" duration="649000" />
-      <workItem from="1620461193046" duration="835000" />
+      <workItem from="1620461193046" duration="1281000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1610675010174</created>
@@ -544,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615864964129</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="update">
+      <created>1620462433741</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1620462433741</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">

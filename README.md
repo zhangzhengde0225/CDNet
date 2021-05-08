@@ -23,7 +23,7 @@ On the basis of [YOLOv5](https://github.com/ultralytics/yolov5), the following t
 
 # News!
 + Jan 2021: [1.0.1 version](https://github.com/zhangzhengde0225/CDNet) of CDNet is released! 
-  With a detection speed of 33.1 FPS on Jetson nano, it obtained an average F1 score of 94.72% in the complex scenarios.
+  With a detection speed of 33.1 FPS on Jetson nano, it obtained an average F1 score of 94.72% in crossing bebahior detection under the complex scenarios.
 
 # Installation
 Get CDNet code and configure the environment, please check out [docs/INSTALL.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/INSTALL.md)
@@ -78,8 +78,10 @@ For more details, please refer to [docs/INSTALL.md](https://github.com/zhangzhen
 
 ![Detection results compare to YOLOv5](https://github.com/zhangzhengde0225/CDNet/blob/master/data/Detection%20results%20compare%20to%20YOLOv5.jpg)
 
-**The square dots denote detection size of 640, while triangle dots denote 288.**
-**The detection speed measured on the NVIDIA edge computing device Jetson nano.**
+Fig.2 Performance compared to YOLOv5.
+The square dots denote detection size of 640, while triangle dots denote 288. 
+The detection speed measured on the NVIDIA edge computing device Jetson nano.
+
 
 # Contributors
 CDNet is authored by Zhengde Zhang, Menglu Tan, Zhicai Lan, Haichun Liu, Ling Pei and Wenxian Yu.
