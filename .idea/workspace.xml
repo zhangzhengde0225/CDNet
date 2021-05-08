@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="98ee5719-0d67-4120-a53f-27e008b8c3b4" name="Default" comment="update3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/DATASETS.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DATASETS.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +217,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -378,7 +377,7 @@
       <workItem from="1618993548295" duration="1153000" />
       <workItem from="1619319797442" duration="649000" />
       <workItem from="1620461193046" duration="4390000" />
-      <workItem from="1620466068483" duration="455000" />
+      <workItem from="1620466068483" duration="1179000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1610675010174</created>
@@ -569,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620465950275</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="update3">
+      <created>1620466531485</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1620466531485</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
