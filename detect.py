@@ -239,8 +239,8 @@ if __name__ == '__main__':
 	opt.use_roi = not opt.not_use_ROI
 	opt.use_ssvm = not opt.not_use_SSVM
 
-	opt.source = "/home/zzd/datasets/crosswalk/testsets_1770/Images"
-	opt.output = "/home/zzd/datasets/crosswalk/testsets_1770/SEv5m_300EP_roi"
+	# opt.source = "/home/zzd/datasets/crosswalk/testsets_1770/Images"
+	# opt.output = "/home/zzd/datasets/crosswalk/testsets_1770/SEv5m_300EP_roi"
 	# opt.use_roi =
 
 	dp = post.DmPost(opt)

@@ -79,8 +79,10 @@ For more details, please refer to [docs/INSTALL.md](https://github.com/zhangzhen
 ![Detection results compare to YOLOv5](https://github.com/zhangzhengde0225/CDNet/blob/master/data/Detection%20results%20compare%20to%20YOLOv5.jpg)
 
 Fig.2 Performance compared to YOLOv5.
-The square dots denote detection size of 640, while triangle dots denote 288. 
-The detection speed measured on the NVIDIA edge computing device Jetson nano.
+
+**CDNet improves the score for 5.13 points and speed for 10.7 FPS on Jetson nano for detection size of 640 compared to YOLOv5.**
+
+**For detection size of 288, the improvements are 13.38 points and 13.1 FPS.**
 
 
 # Contributors
