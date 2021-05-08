@@ -2,9 +2,7 @@
 
 
 ## Trainset
-+ from baidu pan: [https://pan.baidu.com/s/1jAsQ_kbU7cX0AqK4wDm6LA ](https://pan.baidu.com/s/1jAsQ_kbU7cX0AqK4wDm6LA)
-  
-    passwd: **hul6**
++ from baidu pan: [https://pan.baidu.com/s/1jAsQ_kbU7cX0AqK4wDm6LA ](https://pan.baidu.com/s/1jAsQ_kbU7cX0AqK4wDm6LA) passwd: **hul6**
 + from jbox: [https://jbox.sjtu.edu.cn/l/Z0i6nQ](https://jbox.sjtu.edu.cn/l/Z0i6nQ)
 + or use wget:
 ```python
@@ -39,9 +37,7 @@ Each .txt file contains annotations in the form of CLS XC YC W H in each line.
 
 
 ## Testsets
-+ from baidu pan: [https://pan.baidu.com/s/1-AWw2AjE8zTP-iVjOoifOg](https://pan.baidu.com/s/1-AWw2AjE8zTP-iVjOoifOg)
-  
-  passwd: **vj6b**
++ from baidu pan: [https://pan.baidu.com/s/1-AWw2AjE8zTP-iVjOoifOg](https://pan.baidu.com/s/1-AWw2AjE8zTP-iVjOoifOg) passwd: **vj6b**
 + from jbox: [https://jbox.sjtu.edu.cn/l/eHE7vD](https://jbox.sjtu.edu.cn/l/eHE7vD)
 + or use wget:
 ```python
