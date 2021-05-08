@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98ee5719-0d67-4120-a53f-27e008b8c3b4" name="Default" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/CrosswalkDetectionNet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CrosswalkDetectionNet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/DATASETS.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DATASETS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for_paper/CDNet_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/for_paper/CDNet_plot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +75,17 @@
       <find>BottleneckCSP</find>
       <find>Bottleneck</find>
     </findStrings>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -207,7 +222,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -221,7 +236,7 @@
       <recent name="$PROJECT_DIR$/for_paper" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.entropy_analyse">
+  <component name="RunManager" selected="Python.CDNet_plot">
     <configuration name="CDNet_plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CrosswalkDetectionNet" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -341,8 +356,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.entropy_analyse" />
         <item itemvalue="Python.CDNet_plot" />
+        <item itemvalue="Python.entropy_analyse" />
         <item itemvalue="Python.testtt" />
         <item itemvalue="Python.train" />
         <item itemvalue="Python.pt2wts" />
@@ -362,7 +377,11 @@
       <updated>1599299659019</updated>
       <workItem from="1614764256316" duration="10875000" />
       <workItem from="1615287570857" duration="22000" />
-      <workItem from="1615858319150" duration="4135000" />
+      <workItem from="1615858319150" duration="5264000" />
+      <workItem from="1617287074587" duration="111000" />
+      <workItem from="1618993548295" duration="1153000" />
+      <workItem from="1619319797442" duration="649000" />
+      <workItem from="1620461193046" duration="835000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1610675010174</created>
@@ -518,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615864342357</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="update">
+      <created>1615864964129</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1615864964129</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -582,7 +608,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CDNet$CDNet_plot.coverage" NAME="CDNet_plot Coverage Results" MODIFIED="1615174949520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_paper" />
+    <SUITE FILE_PATH="coverage/CDNet$CDNet_plot.coverage" NAME="CDNet_plot Coverage Results" MODIFIED="1617287160287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_paper" />
     <SUITE FILE_PATH="coverage/CDNet$entropy_analyse.coverage" NAME="entropy_analyse Coverage Results" MODIFIED="1615191908863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_paper" />
   </component>
   <component name="editorHistoryManager">

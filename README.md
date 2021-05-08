@@ -4,6 +4,8 @@ This repository represents Crosswalk Detection Network (CDNet), which is a speci
 
 ![graphical abstract](https://github.com/zhangzhengde0225/CDNet/blob/master/data/graphical_abstract.jpg)
 
+Fig.1 Graphical abstract.
+
 # Highlights
 + A crosswalk detection and vehicle crossing behavior detection network is realized.
 + The accuracy and speed exceed YOLOv5 in the specific task.
