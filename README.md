@@ -113,8 +113,7 @@ Homepage of Zhengde Zhang: [zhangzhengde0225.github.io](https://zhangzhengde0225
 @article{Zheng-De Zhang, Meng-Lu Tan, Zhi-Cai Lan, Hai-Chun Liu, Ling Pei and Wen-Xian Yu.
 CDNet: a real-time and robust crosswalk detection network on Jetson nano based on YOLOv5.
 Neural Computing and Applications, 2022.
-DOI: 10.1007/s00521-022-07007-9
-}
+DOI: 10.1007/s00521-022-07007-9}
 ```
 Please star this project if it helps you.
 
