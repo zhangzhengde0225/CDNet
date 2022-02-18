@@ -22,11 +22,15 @@ c = [
 	'black', 'lightcoral', 'limegreen', 'royalblue', 'orange', 'mediumorchid',
 	'deepskyblue', '#EE3B3B', 'gold', 'fuchsia',
 	'sandybrown', 'cyan']
+c = [
+	'black', 'lightcoral', 'limegreen', 'royalblue', 'orange', 'mediumorchid',
+	'deepskyblue', '#009966', '#EE3B3B', 'gold', 'fuchsia',
+	'sandybrown', 'cyan']
 
 
 class CDNetPlot(object):
 	def __init__(self):
-		self.data = self.load_data('data/results_2.yaml')
+		self.data = self.load_data('data/results_3.yaml')
 
 	def load_data(self, path):
 		with open(path, 'r') as f:
@@ -62,7 +66,7 @@ class CDNetPlot(object):
 		plt.xticks(range(0, 100, 5), size=12, weight='bold')
 		plt.xlim(1, 42)
 		plt.yticks(range(60, 101, 5), size=12, weight='bold')
-		plt.ylim(77, 98)
+		plt.ylim(78, 98)
 		# plt.xticks(range(0, 300, 50))
 		plt.show()
 		# plt.savefig('results.png', dpi=2000, bbox_inches='tight')

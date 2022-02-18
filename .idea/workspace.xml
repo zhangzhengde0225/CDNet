@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="98ee5719-0d67-4120-a53f-27e008b8c3b4" name="Default" comment="update3">
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evaluate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/fog_image/raw.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fog_augment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/_base_/datasets/zzd_coco_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/_base_/datasets/zzd_coco_instance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/_base_/datasets/zzd_crosswalk_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/_base_/datasets/zzd_crosswalk_instance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/centernet/zzd_centernet_resnet18_dcnv2_140e_crosswalk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/deformable_detr/zzd_deformable_detr_r50_16x2_50e_crosswalk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/faster_rcnn/zzd_faster_rcnn_r50_fpn_1x_coco.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/faster_rcnn/zzd_faster_rcnn_r50_fpn_1x_crosswalk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/htc/zzd_htc_r50_fpn_1x_crosswalk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/htc/zzd_htc_without_semantic_r50_fpn_1x_crosswalk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/mask_rcnn/zzd_mask_rcnn_r50_fpn_1x_coco.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/mask_rcnn/zzd_mask_rcnn_r50_fpn_1x_crosswalk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/scnet/zzd_scnet_r50_fpn_1x_crosswalk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/swin/zzd_mask_rcnn_swin-t-p4-w7_fpn_1x_crosswalk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/yolox/zzd_yolox_m_8x8_300e_crosswalk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/yolox/zzd_yolox_s_8x8_300e_crosswalk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/demo/zzd_inference_speed_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/zzd_inference.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repos/mmdetection/zzd_train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/check_coco.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/check_dataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/synthetic_fog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/yolo2coco.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CrosswalkDetectionNet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CrosswalkDetectionNet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/MODEL_ZOO.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MODEL_ZOO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/detect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/DATASETS.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DATASETS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for_paper/CDNet_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/for_paper/CDNet_plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for_paper/results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_confusing_matrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/yoloSE.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/yoloSE.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post.bak.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/post.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pt2wts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/SHNAVI.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/cl_setting.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/rect.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/datasets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/torch_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/torch_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,10 +138,21 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PUSH_TAGS">
-      <GitPushTagMode />
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -214,25 +279,25 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="credentialsType com.jetbrains.python.remote.PyCreateRemoteInterpreterDialog$PyCreateRemoteSdkForm" value="Web Deployment" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/repos/mmdetection/configs/deformable_detr" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/for_paper/data" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/data" />
-      <recent name="$PROJECT_DIR$/for_paper" />
-      <recent name="$PROJECT_DIR$/example/images/complex_condition" />
+      <recent name="$PROJECT_DIR$/repos/mmdetection/configs/deformable_detr" />
+      <recent name="$PROJECT_DIR$/repos/mmdetection/configs/yolox" />
+      <recent name="$PROJECT_DIR$/repos/mmdetection/configs/swin" />
+      <recent name="$PROJECT_DIR$/repos/mmdetection/configs/centernet" />
+      <recent name="$PROJECT_DIR$/repos/mmdetection/configs/htc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/for_paper" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.detect">
+  <component name="RunManager" selected="Python.zzd_train">
     <configuration name="CDNet_plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CrosswalkDetectionNet" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -277,7 +342,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="entropy_analyse" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="synthetic_fog" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CrosswalkDetectionNet" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -285,12 +350,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/for_paper" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/for_paper/entropy_analyse.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/synthetic_fog.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -299,7 +364,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testtt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CrosswalkDetectionNet" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -307,12 +372,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/repos/mmdetection/tools" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testtt.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/repos/mmdetection/tools/train.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -321,7 +386,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="zzd_train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CrosswalkDetectionNet" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -329,12 +394,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/repos/mmdetection" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/repos/mmdetection/zzd_train.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -344,19 +409,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.train" />
-      <item itemvalue="Python.testtt" />
       <item itemvalue="Python.CDNet_plot" />
-      <item itemvalue="Python.entropy_analyse" />
       <item itemvalue="Python.detect" />
+      <item itemvalue="Python.synthetic_fog" />
+      <item itemvalue="Python.zzd_train" />
+      <item itemvalue="Python.train" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.detect" />
-        <item itemvalue="Python.CDNet_plot" />
-        <item itemvalue="Python.entropy_analyse" />
-        <item itemvalue="Python.testtt" />
+        <item itemvalue="Python.zzd_train" />
         <item itemvalue="Python.train" />
+        <item itemvalue="Python.CDNet_plot" />
+        <item itemvalue="Python.synthetic_fog" />
+        <item itemvalue="Python.detect" />
       </list>
     </recent_temporary>
   </component>
@@ -379,7 +444,41 @@
       <workItem from="1619319797442" duration="649000" />
       <workItem from="1620461193046" duration="4390000" />
       <workItem from="1620466068483" duration="1363000" />
-      <workItem from="1620468461943" duration="126000" />
+      <workItem from="1620468461943" duration="505000" />
+      <workItem from="1625378936135" duration="186000" />
+      <workItem from="1626936520506" duration="4370000" />
+      <workItem from="1627613940974" duration="2978000" />
+      <workItem from="1628483891409" duration="608000" />
+      <workItem from="1628575983537" duration="12000" />
+      <workItem from="1630327482651" duration="134000" />
+      <workItem from="1630554594070" duration="42000" />
+      <workItem from="1631502003887" duration="13000" />
+      <workItem from="1631502307236" duration="2304000" />
+      <workItem from="1631700600306" duration="28000" />
+      <workItem from="1631940550484" duration="1196000" />
+      <workItem from="1631942230441" duration="648000" />
+      <workItem from="1631943766955" duration="74000" />
+      <workItem from="1631943843670" duration="32000" />
+      <workItem from="1631943893469" duration="9046000" />
+      <workItem from="1632276015248" duration="29749000" />
+      <workItem from="1632448337234" duration="5160000" />
+      <workItem from="1632717817582" duration="4250000" />
+      <workItem from="1632734530569" duration="3580000" />
+      <workItem from="1632795626726" duration="9788000" />
+      <workItem from="1632815513563" duration="1229000" />
+      <workItem from="1632816748257" duration="10080000" />
+      <workItem from="1632881894214" duration="1034000" />
+      <workItem from="1632884248421" duration="11489000" />
+      <workItem from="1634021662097" duration="1552000" />
+      <workItem from="1634028102460" duration="17048000" />
+      <workItem from="1634403732118" duration="1000" />
+      <workItem from="1634559443667" duration="560000" />
+      <workItem from="1635742936907" duration="750000" />
+      <workItem from="1635823342622" duration="6243000" />
+      <workItem from="1635927507494" duration="4000" />
+      <workItem from="1640668142157" duration="866000" />
+      <workItem from="1643378964740" duration="618000" />
+      <workItem from="1645180923487" duration="835000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1610675010174</created>
@@ -584,7 +683,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620468079387</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update3">
+      <created>1620468621906</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1620468621906</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -651,8 +757,11 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CDNet$detect.coverage" NAME="detect Coverage Results" MODIFIED="1620463673065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CDNet$CDNet_plot.coverage" NAME="CDNet_plot Coverage Results" MODIFIED="1617287160287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_paper" />
+    <SUITE FILE_PATH="coverage/CDNet$synthetic_fog.coverage" NAME="synthetic_fog Coverage Results" MODIFIED="1632289854908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/CDNet$CDNet_plot.coverage" NAME="CDNet_plot Coverage Results" MODIFIED="1632390749249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_paper" />
     <SUITE FILE_PATH="coverage/CDNet$entropy_analyse.coverage" NAME="entropy_analyse Coverage Results" MODIFIED="1615191908863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/for_paper" />
+    <SUITE FILE_PATH="coverage/CDNet$train.coverage" NAME="train Coverage Results" MODIFIED="1632881790829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repos/mmdetection/tools" />
+    <SUITE FILE_PATH="coverage/CDNet$zzd_train.coverage" NAME="zzd_train Coverage Results" MODIFIED="1632881974246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repos/mmdetection" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example/images/for_overall_architecture/filename1128.jpg">

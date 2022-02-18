@@ -4,9 +4,10 @@ import math
 import os
 import time
 from pathlib import Path
-from random import random
+# from random import random
+import random
 
-import test
+from scripts import test
 import numpy as np
 import torch.distributed as dist
 import torch.nn.functional as F
@@ -25,7 +26,7 @@ from utils.datasets import create_dataloader
 from utils.general import (
 	check_img_size, torch_distributed_zero_first, labels_to_class_weights, plot_labels, check_anchors,
 	labels_to_image_weights, compute_loss, plot_images, fitness, strip_optimizer, plot_results,
-	get_latest_run, check_git_status, check_file, increment_dir, print_mutation)
+	get_latest_run, check_git_status, check_file, increment_dir, print_mutation, plot_evolution)
 from utils.google_utils import attempt_download
 from utils.torch_utils import init_seeds, ModelEMA, select_device
 
@@ -66,7 +67,6 @@ def train(hyp, opt, device, tb_writer=None):
 	epochs, batch_size, total_batch_size, weights, rank = \
 		opt.epochs, opt.batch_size, opt.total_batch_size, opt.weights, opt.local_rank
 
-
 	# Save run settings
 	with open(Path(log_dir) / 'hyp.yaml', 'w') as f:
 		yaml.dump(hyp, f, sort_keys=False)
@@ -96,8 +96,7 @@ def train(hyp, opt, device, tb_writer=None):
 	else:
 		model = ModelSE(opt.cfg, nc=nc).to(device)
 
-	print(model)
-	exit()
+	# print(model)
 
 	# Image sizes
 	gs = int(max(model.stride))  # grid size (max stride)
@@ -428,12 +427,12 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--cfg', type=str, default='models/yolov5m.yaml', help='model.yaml path')
 	parser.add_argument('--data', type=str, default='data/crosswalk.yaml', help='data.yaml path')
-	parser.add_argument('--trainset_path', type=str, default='/home/zzd/datasets/crosswalk/train_data_v5_format',
-						help='the trainsets path in YOLOv5 format')
-	parser.add_argument('--not-use-SE', action='store_false', help='whether to YOLOv5 embedded in SE module')
+	parser.add_argument('--trainset_path', type=str, help='the trainsets path in YOLOv5 format',
+						default='/home/zzd/datasets/crosswalk/fogged_train_data_v5_format')
+	parser.add_argument('--not-use-SE', action='store_true', help='whether to YOLOv5 embedded in SE module')
 	parser.add_argument('--hyp', type=str, default='', help='hyp.yaml path (optional)')
 	parser.add_argument('--epochs', type=int, default=100)
-	parser.add_argument('--batch-size', type=int, default=32, help='total batch size for all GPUs')
+	parser.add_argument('--batch-size', type=int, default=16, help='total batch size for all GPUs')
 	parser.add_argument('--img-size', nargs='+', type=int, default=[640, 640], help='train,test sizes')
 	parser.add_argument('--rect', action='store_true', help='rectangular training')
 	parser.add_argument('--resume', nargs='?', const='get_last', default='',
@@ -453,7 +452,6 @@ if __name__ == '__main__':
 	parser.add_argument('--sync-bn', action='store_true', help='use SyncBatchNorm, only available in DDP mode')
 	parser.add_argument('--local_rank', type=int, default=-1, help='DDP parameter, do not modify')
 	opt = parser.parse_args()
-
 
 	# Resume
 	last = get_latest_run() if opt.resume == 'get_last' else opt.resume  # resume from most recent run

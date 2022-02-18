@@ -89,7 +89,7 @@ def sparsity(model):
 
 def prune(model, amount=0.3):
 	# Prune model to requested global sparsity
-	import torch.nn.utils.prune as prune
+	import torch.nn.utils.prune as prunes
 	print('Pruning model... ', end='')
 	for name, m in model.named_modules():
 		if isinstance(m, nn.Conv2d):

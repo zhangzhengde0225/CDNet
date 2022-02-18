@@ -33,7 +33,11 @@ The trainsets includes training and verification set, and the file structure for
       -- ...
    --|--test  # validation labels
 ```
-Each .txt file contains annotations in the form of CLS XC YC W H in each line.
+Each .txt file contains annotations in the format of CLS XC YC W H in each line. 
+
+CLS(Classes): crosswalk, guide_arrows
+
+XC YC W H in terms of percentage.
 
 
 ## Testsets

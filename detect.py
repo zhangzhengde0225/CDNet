@@ -11,12 +11,13 @@ import cv2
 import torch
 import torch.backends.cudnn as cudnn
 from numpy import random
+from tqdm import tqdm
 
 from models.experimental import attempt_load
 from utils.datasets import LoadStreams, LoadImages
 from utils.general import check_img_size, non_max_suppression, apply_classifier, scale_coords, xyxy2xywh, plot_one_box
 from utils.torch_utils import select_device, load_classifier, time_synchronized
-import post
+from scripts import post
 
 
 def detect(opt, dp, save_img=False):
@@ -33,6 +34,7 @@ def detect(opt, dp, save_img=False):
 
 	# Load model
 	model = attempt_load(weights, map_location=device)  # load FP32 model
+
 	imgsz = check_img_size(imgsz, s=model.stride.max())  # check img_size 如果不是32的倍数，就向上取整调整至32的倍数并答应warning
 
 	if half:
@@ -48,7 +50,7 @@ def detect(opt, dp, save_img=False):
 	# Set Dataloader
 	vid_path, vid_writer = None, None
 	if opt.use_roi:
-		print(dp.cl)
+		# print(dp.cl)
 		# print(dp.cl[0], dp.cl[1])
 		# cl = opt.control_line
 		cl = dp.cl
@@ -68,9 +70,13 @@ def detect(opt, dp, save_img=False):
 	names = model.module.names if hasattr(model, 'module') else model.names  # 解决GPU保存的模型多了module属性的问题
 	colors = [[random.randint(0, 255) for _ in range(3)] for _ in range(len(names))]  # 随机颜色，对应names，names是class
 
+	# fix issue: when single cls, names = ['item'] rather than names = ['crosswalk']
+	if 'item' in names:
+		names = ['crosswalk']
+
 	# prune
 	# torch_utils.prune(model, 0.7)
-	# model.eval()
+	model.eval()
 
 	# Run inference
 	t0 = time.time()
@@ -79,7 +85,8 @@ def detect(opt, dp, save_img=False):
 
 	detected_img_id = 0
 	time_list = [None] * len(dataset)
-	for iii, (path, img, im0s, vid_cap, recover) in enumerate(dataset):
+	bar = tqdm(dataset)
+	for iii, (path, img, im0s, vid_cap, recover) in enumerate(bar):
 		# print(img.shape, im0s.shape, vid_cap)
 		# exit()
 
@@ -98,7 +105,7 @@ def detect(opt, dp, save_img=False):
 		# Apply NMS
 		pred = non_max_suppression(pred, opt.conf_thres, opt.iou_thres, classes=opt.classes, agnostic=opt.agnostic_nms)
 		t2 = time_synchronized()
-		print(f'infer time:{t2-t1:.4f}s ', end='')
+		infer_time = t2 - t1
 		time_list[iii] = t2-t1
 
 		# print('\n', len(pred), pred, recover)  # list 长度是bs，代表每张图, 元素tensor，代表检测到的目标，每个tensor.shape [n, 6] xy4, conf, cls
@@ -155,7 +162,7 @@ def detect(opt, dp, save_img=False):
 
 			# Print time (inference + NMS)
 			prt_str = '%sDone. (%.5fs)' % (s, t2 - t1)
-			print(prt_str)
+			# print(prt_str)
 			os.system(f'echo "{prt_str}" >> {opt.output}/detect.log')
 
 			# Stream results
@@ -185,15 +192,16 @@ def detect(opt, dp, save_img=False):
 					im0 = dp.dmpost(im0, det, det_id=detected_img_id, filename=tmp_filename, names=names)
 					vid_writer.write(im0)
 			detected_img_id += 1
+		bar.set_description(f'inf_time: {infer_time*1000:.2f}ms {prt_str:<40}')
 
 	if save_txt or save_img:
-		print('Results saved to %s' % os.getcwd() + os.sep + out)
+		print('Results saved to %s' % out)
 		if platform == 'darwin' and not opt.update:  # MacOS
 			os.system('open ' + save_path)
 
 	print('Done. (%.3fs)' % (time.time() - t0))
 	time_arr = np.array(time_list)
-	prnt = f'Done. Network mean inference time: {np.mean(time_arr):.5f}s,  Mean FPS: {1/np.mean(time_arr):.4f}.'
+	prnt = f'Done. Network mean inference time: {np.mean(time_arr)*1000:.2f}ms,  Mean FPS: {1/np.mean(time_arr):.2f}.'
 	print(f'\nModel size {opt.img_size} inference {prnt}')
 	os.system(f'echo "{prnt}" >> {opt.output}/detect.log')
 	os.system(f'echo "useroi {opt.img_size} {prnt}" >> detect2.log')
@@ -209,10 +217,10 @@ def run(opt, dp):
 			detect(opt, dp)
 
 
-if __name__ == '__main__':
+def get_opt():
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--weights', nargs='+', type=str, required=False,
-						default='runs/YOLOv5m_ep300_exp/weights/best.pt',
+						default='runs/SEm_NST1_fog1_ep100/weights/best.pt',
 						help='trained model path model.pt ddpath(s)')
 	parser.add_argument('--source', type=str, default='example/images', help='source')  # file/folder, 0 for webcam
 	parser.add_argument('--output', type=str, default='example/output', help='output folder')  # output folder
@@ -226,22 +234,43 @@ if __name__ == '__main__':
 	parser.add_argument('--agnostic-nms', action='store_true', help='class-agnostic NMS')
 	parser.add_argument('--augment', action='store_true', help='augmented inference')
 	parser.add_argument('--update', action='store_true', help='update all models')
-	parser.add_argument('--control-line-setting', type=str, default='settings/cl_setting.yaml', help='control line setting')
-	parser.add_argument('--select-control-line', type=str, default='general', help='select which control line. i.e. general, 0036')
-	parser.add_argument('--field-size', type=int, default=5, help='receptive filed size for post')
-	parser.add_argument('--plot-classes', type=list, default=['crosswalk'], help='specifies which classes will be drawn')
+	parser.add_argument('--control-line-setting', type=str, default='settings/cl_setting.yaml',
+						help='control line setting')
+	parser.add_argument('--select-control-line', type=str, default='general',
+						help='select which control line. i.e. general, 0036')
+	parser.add_argument('--field-size', type=int, default=5, help='receptive field size for post')
+	parser.add_argument('--plot-classes', type=list, default=['crosswalk'],
+						help='specifies which classes will be drawn')
 	parser.add_argument('--not-use-ROI', action='store_true',
 						help='not use roi for accelerate inference speed if there is the flag')
 	parser.add_argument('--not-use-SSVM', action='store_true',
 						help='not use ssvm method for analyse vehicle crossing behavior if there is the flag')
 
 	opt = parser.parse_args()
+	return opt
+
+
+if __name__ == '__main__':
+	opt = get_opt()
+	opt.weights = 'runs/m_ep300/weights/best.pt'
+	opt.not_use_ROI = True
+	opt.not_use_SSVM = True
+
 	opt.use_roi = not opt.not_use_ROI
 	opt.use_ssvm = not opt.not_use_SSVM
+	for_paper = False
+	if for_paper:
+		exps = [
+			'm_ep300', 'SEm_NST0_fog0_ep100', 'SEm_NST1_fog0_ep100',
+			'SEm_NST1_fog0_ep300', 'SEm_NST1_fog1_ep100']
+		exp = exps[1]
 
-	# opt.source = "/home/zzd/datasets/crosswalk/testsets_1770/Images"
-	# opt.output = "/home/zzd/datasets/crosswalk/testsets_1770/SEv5m_300EP_roi"
-	# opt.use_roi =
+		roi = int(opt.use_roi)
+		ssvm = int(opt.use_ssvm)
+
+		opt.weights = f"runs/{exp}/weights/best.pt"
+		opt.source = "/home/zzd/datasets/crosswalk/testsets_1770/Images"
+		opt.output = f"/home/zzd/datasets/crosswalk/testsets_1770/{exp}_sz{opt.img_size}_ROI{roi}_SSVM{ssvm}"
 
 	dp = post.DmPost(opt)
 
