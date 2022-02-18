@@ -3,7 +3,7 @@
 This repository is the codes, datasets and tutorials for the paper 
 "CDNet: a real-time and robust crosswalk detection network on Jetson nano based on YOLOv5".
 
-Paper link: [https://doi.org/10.1007/s00521-022-07007-9](https://doi.org/10.1007/s00521-022-07007-9)
+
 
 CDNet (Crosswalk Detection Network) is a specific implementation of crosswalk (zebra crossing) detection and vehicle crossing behavior analysis under the vision of vehicle-mounted camera. 
 
@@ -116,8 +116,10 @@ Neural Computing and Applications, 2022.
 DOI: 10.1007/s00521-022-07007-9
 }
 ```
-
 Please star this project if it helps you.
+
+Paper link: [https://doi.org/10.1007/s00521-022-07007-9](https://doi.org/10.1007/s00521-022-07007-9)
+
 
 # License
 CDNet is freely available for free non-commercial use, and may be redistributed under these conditions. For commercial queries, please drop an e-mail at drivener@163.com. We will send the detail agreement to you.

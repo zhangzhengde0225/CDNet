@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98ee5719-0d67-4120-a53f-27e008b8c3b4" name="Default" comment="update3">
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/evaluate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/fog_image/raw.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fog_augment.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/_base_/datasets/zzd_coco_detection.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/_base_/datasets/zzd_coco_instance.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/repos/mmdetection/configs/_base_/datasets/zzd_crosswalk_detection.py" afterDir="false" />
@@ -28,36 +24,7 @@
       <change afterPath="$PROJECT_DIR$/repos/mmdetection/demo/zzd_inference_speed_test.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/repos/mmdetection/zzd_inference.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/repos/mmdetection/zzd_train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/check_coco.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/check_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/synthetic_fog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/yolo2coco.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CrosswalkDetectionNet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CrosswalkDetectionNet.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/detect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/DATASETS.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DATASETS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for_paper/CDNet_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/for_paper/CDNet_plot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for_paper/results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_confusing_matrix.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/yoloSE.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/yoloSE.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post.bak.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pt2wts.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/SHNAVI.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/cl_setting.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/rect.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/datasets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/torch_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/torch_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -478,7 +445,7 @@
       <workItem from="1635927507494" duration="4000" />
       <workItem from="1640668142157" duration="866000" />
       <workItem from="1643378964740" duration="618000" />
-      <workItem from="1645180923487" duration="835000" />
+      <workItem from="1645180923487" duration="1122000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1610675010174</created>
@@ -690,7 +657,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620468621906</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="update3">
+      <created>1645181840742</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1645181840742</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
