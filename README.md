@@ -106,7 +106,7 @@ Currently, it is maintained by Zhengde Zhang (drivener@163.com).
 
 Please feel free to contact us if you have any question.
 
-Homepage of Zhengde Zhang: [zhangzhengde0225.github.io](https://zhangzhengde0225.github.io).
+The Academic homepage of Zhengde Zhang: [zhangzhengde0225.github.io](https://zhangzhengde0225.github.io).
 
 # Citation
 ```
