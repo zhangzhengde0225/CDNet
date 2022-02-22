@@ -1,9 +1,10 @@
+#### English | [简体中文](https://github.com/zhangzhengde0225/CDNet/blob/master/Docs/README_zh_cn.md)
+Please star this project if its helpful to you.
+
 # CDNet
 
 This repository is the codes, datasets and tutorials for the paper 
 "CDNet: a real-time and robust crosswalk detection network on Jetson nano based on YOLOv5".
-
-
 
 CDNet (Crosswalk Detection Network) is a specific implementation of crosswalk (zebra crossing) detection and vehicle crossing behavior analysis under the vision of vehicle-mounted camera. 
 
@@ -110,15 +111,19 @@ The Academic homepage of Zhengde Zhang: [zhangzhengde0225.github.io](https://zha
 
 # Citation
 ```
-@article{Zheng-De Zhang, Meng-Lu Tan, Zhi-Cai Lan, Hai-Chun Liu, Ling Pei and Wen-Xian Yu.
-CDNet: a real-time and robust crosswalk detection network on Jetson nano based on YOLOv5.
-Neural Computing and Applications, 2022.
-DOI: 10.1007/s00521-022-07007-9}
+@article{CDNet,
+author={Zheng-De Zhang, Meng-Lu Tan, Zhi-Cai Lan, Hai-Chun Liu, Ling Pei and Wen-Xian Yu},
+title={CDNet: a real-time and robust crosswalk detection network on Jetson nano based on YOLOv5},
+Journal={Neural Computing and Applications}, 
+Year={2022},
+DOI={10.1007/s00521-022-07007-9},
+}
 ```
 Please star this project if it helps you.
 
-Paper link: [https://doi.org/10.1007/s00521-022-07007-9](https://doi.org/10.1007/s00521-022-07007-9)
+Download Paper: [https://doi.org/10.1007/s00521-022-07007-9](https://doi.org/10.1007/s00521-022-07007-9)
 
+View Paper: [Online](https://rdcu.be/cHuc8)
 
 # License
 CDNet is freely available for free non-commercial use, and may be redistributed under these conditions. For commercial queries, please drop an e-mail at drivener@163.com. We will send the detail agreement to you.
