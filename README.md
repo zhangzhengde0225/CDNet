@@ -1,5 +1,6 @@
-#### English | [简体中文](https://github.com/zhangzhengde0225/CDNet/blob/master/Docs/README_zh_cn.md)
-Please star this project if its helpful to you.
+#### English | [简体中文](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/README_zh_cn.md)
+
+Please star this project if it helps you.
 
 # CDNet
 
