@@ -9,7 +9,8 @@
 
 CDNet (Crosswalk Detection Network) 是车载摄像头视野下检测斑马线（人行横道）和分析车辆过线行为的具体实现。
 
-![graphical abstract](https://github.com/zhangzhengde0225/CDNet/blob/master/data/graphical_abstract.jpg)
+# ![graphical abstract](https://github.com/zhangzhengde0225/CDNet/blob/master/data/graphical_abstract.jpg)
+![GA](https://zhangzhengde0225.github.io/images/CDNet_GA.jpg)
 
 Fig.1 图形摘要
 
