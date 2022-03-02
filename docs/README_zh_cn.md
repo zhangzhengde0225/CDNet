@@ -41,7 +41,7 @@ Fig.1 图形摘要
 [docs/DATASETS.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md)
 
 # 快速开始Quick Start
-## 训练Training
+## 训练Train
 
 安装CDNet代码，配置环境和下载数据集后，输入代码训练：
 ```

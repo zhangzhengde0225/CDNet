@@ -1,6 +1,7 @@
 #### English | [简体中文](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/README_zh_cn.md)
 
-Please star this project if it helps you.
+Please **star this project** in the upper right corner and **cite this paper** blow 
+if this project helps you. 
 
 # CDNet
 
@@ -20,20 +21,14 @@ Fig.1 Graphical abstract.
 + Real-time detection (33.1 FPS) is implemented on Jetson nano edge-computing device.
 +The datasets, tutorials and source codes are available on GitHub.
   
+# Contribution
 
-On the basis of [YOLOv5](https://github.com/ultralytics/yolov5), the following technologies are proposed to improve the speed and accuracy :
-
-+ SENet (Squeeze-and-Excitation Network)
-+ NST (Negative Samples Training)
-+ ROI (Region Of Interest)
-+ SSVM (Slide receptive field Short-term Vectors Memory)
-+ SFA (Synthetic Fog Augment)
-
-# News!
-+ Sep 2021: [1.1.0 version](https://github.com/zhangzhengde0225/CDNet) is released! The synthetic fog algorithm is implemented, 
-  the datasets has been enhanced to 6160 images, which half of the images is fogged. The fogging source code is released.
-+ Jan 2021: [1.0.1 version](https://github.com/zhangzhengde0225/CDNet) of CDNet is released! 
-  With a detection speed of 33.1 FPS on Jetson nano, it obtained an average F1 score of 94.72% in crossing bebahior detection under the complex scenarios.
++ SENet (Squeeze-and-Excitation Network), F1 score up, speed slightly down
++ NST (Negative Samples Training), F1 score up, speed invariant
++ ROI (Region Of Interest), F1 score down, speed up
++ SSVM (Slide receptive field Short-term Vectors Memory), transfer crosswalk detection task into vehicle crossing behavior task, 
+  F1 score up, speed invariant
++ SFA (Synthetic Fog Augment), dataset augment, adapt to foggy weather, F1 score up, speed invariant
 
 # Installation
 Get CDNet code and configure the environment, please check out [docs/INSTALL.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/INSTALL.md)
@@ -45,7 +40,7 @@ Please check out [docs/MODEL_ZOO.md](https://github.com/zhangzhengde0225/CDNet/b
 Download trainsets and testsets, please check out [docs/DATASETS.md](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md)
 
 # Quick Start
-## Training
+## Train
 
 Once you get the CDNet code, configure the environment and download the dataset, juse type:
 ```
@@ -112,8 +107,25 @@ The Academic homepage of Zhengde Zhang: [zhangzhengde0225.github.io](https://zha
 
 # Acknowledgement
 
-We are very grateful that the deployment of the model to the Jetson nano has been supported by the 
-[tensorrtx](https://github.com/wang-xinyu/tensorrtx) project.
+We are very grateful to the 
+[yolov5](https://github.com/ultralytics/yolov5) project
+for the benchmark detection algorithm.
+
+We are very grateful to the 
+[tensorrtx](https://github.com/wang-xinyu/tensorrtx) project
+for the deployment techniques to the Jetson nano.
+
+# Links
+Detect Video Samples：[https://www.bilibili.com/video/BV1qf4y1B7BA](https://www.bilibili.com/video/BV1qf4y1B7BA)
+
+Read Full Text of This Paper：[https://rdcu.be/cHuc8](https://rdcu.be/cHuc8)
+
+Download Full Text of this Paper：[https://doi.org/10.1007/s00521-022-07007-9](https://doi.org/10.1007/s00521-022-07007-9)
+
+Project Introduction on CSDN：[http://t.csdn.cn/Cf7c7](http://t.csdn.cn/Cf7c7)
+
+If it is helps you, 
+please star this project in the upper right corner and cite this paper blow.
 
 # Citation
 ```
@@ -125,11 +137,6 @@ Year={2022},
 DOI={10.1007/s00521-022-07007-9},
 }
 ```
-Please star this project if it helps you.
-
-Download Paper: [https://doi.org/10.1007/s00521-022-07007-9](https://doi.org/10.1007/s00521-022-07007-9)
-
-View Paper: [Online](https://rdcu.be/cHuc8)
 
 # License
 CDNet is freely available for free non-commercial use, and may be redistributed under these conditions. For commercial queries, please drop an e-mail at drivener@163.com. We will send the detail agreement to you.
