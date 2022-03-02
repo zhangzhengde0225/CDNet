@@ -5,20 +5,20 @@
 
 # CDNet
 
-这个项目是论文的《CDNet：基于 YOLOv5 的 Jetson nano 上实时且稳健的人行横道检测网络》的代码、数据集和教程。
+这个项目是论文的《CDNet: 一个基于YOLOv5的在Jetson Nano上实时、鲁棒的斑马线检测网络》的代码、数据集和教程。
 
-CDNet (Crosswalk Detection Network) 是车载摄像头视觉下人行横道（斑马线）检测和车辆穿越行为分析的具体实现。
+CDNet (Crosswalk Detection Network) 是车载摄像头视野下检测斑马线（人行横道）和分析车辆过线行为的具体实现。
 
 ![graphical abstract](https://github.com/zhangzhengde0225/CDNet/blob/master/data/graphical_abstract.jpg)
 
 Fig.1 图形摘要
 
 # Highlights
-+ 实现了人行横道检测和车辆横穿行为检测网络。
-+ 在特定任务中准确率和速度超过YOLOv5。
++ 实现了斑马线检测和车辆过线行为检测。
++ 在特定任务中准确率和速度超过原生YOLOv5。
 + 在阴天、晴天、雨天、夜间等真实复杂场景中实现高鲁棒性。
 + 在 Jetson nano 边缘计算设备上实现实时检测 (33.1 FPS)。
-+ 斑马线数据集：标注好的，车载摄像头视角下的，共计6868张图 
++ 提供了标注好的斑马线数据集，共计6868张图 。
 
 # 贡献Contribution
 
