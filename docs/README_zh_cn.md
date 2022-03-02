@@ -9,7 +9,6 @@
 
 CDNet (Crosswalk Detection Network) 是车载摄像头视野下检测斑马线（人行横道）和分析车辆过线行为的具体实现。
 
-# ![graphical abstract](https://github.com/zhangzhengde0225/CDNet/blob/master/data/graphical_abstract.jpg)
 ![GA](https://zhangzhengde0225.github.io/images/CDNet_GA.jpg)
 
 Fig.1 图形摘要
@@ -90,8 +89,7 @@ python fog_augment.py
 
 # 结果Results
 
-![Detection results compare to YOLOv5](https://github.com/zhangzhengde0225/CDNet/blob/master/data/Detection%20results%20compare%20to%20YOLOv5.jpg)
-
+![Results](https://zhangzhengde0225.github.io/images/CDNet_Results.jpg)
 Fig.2 与原生YOLOv5性能对比Performance compared to YOLOv5.
 
 **与原生YOLOv5相比，检测尺寸为640时，CDNet 在 Jetson nano 上提高了5.13%的F1分数和10.7FPS的速度，**

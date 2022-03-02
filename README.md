@@ -10,7 +10,7 @@ This repository is the codes, datasets and tutorials for the paper
 
 CDNet (Crosswalk Detection Network) is a specific implementation of crosswalk (zebra crossing) detection and vehicle crossing behavior analysis under the vision of vehicle-mounted camera. 
 
-![graphical abstract](https://github.com/zhangzhengde0225/CDNet/blob/master/data/graphical_abstract.jpg)
+![GA](https://zhangzhengde0225.github.io/images/CDNet_GA.jpg)
 
 Fig.1 Graphical abstract.
 
@@ -87,7 +87,7 @@ For more details, please view the source code in fog_augment.py and /scripts/syn
 
 # Results
 
-![Detection results compare to YOLOv5](https://github.com/zhangzhengde0225/CDNet/blob/master/data/Detection%20results%20compare%20to%20YOLOv5.jpg)
+![Results](https://zhangzhengde0225.github.io/images/CDNet_Results.jpg)
 
 Fig.2 Performance compared to YOLOv5.
 
