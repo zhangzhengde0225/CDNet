@@ -110,6 +110,11 @@ Please feel free to contact us if you have any question.
 
 The Academic homepage of Zhengde Zhang: [zhangzhengde0225.github.io](https://zhangzhengde0225.github.io).
 
+# Acknowledgement
+
+We are very grateful that the deployment of the model to the Jetson nano has been supported by the 
+[tensorrtx](https://github.com/wang-xinyu/tensorrtx) project.
+
 # Citation
 ```
 @article{CDNet,
