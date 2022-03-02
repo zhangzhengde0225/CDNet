@@ -11,7 +11,7 @@ CDNet (Crosswalk Detection Network) 是车载摄像头视觉下人行横道（�
 
 ![graphical abstract](https://github.com/zhangzhengde0225/CDNet/blob/master/data/graphical_abstract.jpg)
 
-Fig.1 图像摘要.
+Fig.1 图形摘要
 
 # Highlights
 + 实现了人行横道检测和车辆横穿行为检测网络。
@@ -93,15 +93,13 @@ python fog_augment.py
 
 Fig.2 与原生YOLOv5性能对比Performance compared to YOLOv5.
 
-**CDNet improves the score for 5.13 points and speed for 10.7 FPS on Jetson nano for detection size of 640 compared to YOLOv5.**
-
-**For detection size of 288, the improvements are 13.38 points and 13.1 FPS.**
-
+**与原生YOLOv5相比，检测尺寸为640时，CDNet 在 Jetson nano 上提高了5.13%的F1分数和10.7FPS的速度，**
+**检测尺寸为288时，提升为13.38%的F1分数和13.1FPS。**
 
 # 贡献者Contributors
 CDNet的作者是: Zhengde Zhang, Menglu Tan, Zhicai Lan, Haichun Liu, Ling Pei and Wenxian Yu。
 
-目前，CDNet有
+目前，CDNet由
 Zhengde Zhang (drivener@163.com)负责维护。
 
 如果您有任何问题，请随时与我们联系。
@@ -120,13 +118,13 @@ Zhengde Zhang的学术主页: [zhangzhengde0225.github.io](https://zhangzhengde0
 
 # 链接Links
 
-视频样例：[https://www.bilibili.com/video/BV1qf4y1B7BA](https://www.bilibili.com/video/BV1qf4y1B7BA)
+B站视频样例：[https://www.bilibili.com/video/BV1qf4y1B7BA](https://www.bilibili.com/video/BV1qf4y1B7BA)
 
 阅读论文全文：[https://rdcu.be/cHuc8](https://rdcu.be/cHuc8)
 
 下载论文全文：[https://doi.org/10.1007/s00521-022-07007-9](https://doi.org/10.1007/s00521-022-07007-9)
 
-中文CSDN介绍：[http://t.csdn.cn/Cf7c7](http://t.csdn.cn/Cf7c7)
+CSDN项目简介：[http://t.csdn.cn/Cf7c7](http://t.csdn.cn/Cf7c7)
 
 如果对您有帮助，请为点击项目右上角的star支持一下或引用论文。
 

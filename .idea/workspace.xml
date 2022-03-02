@@ -430,7 +430,7 @@
       <workItem from="1645180923487" duration="2030000" />
       <workItem from="1645510596261" duration="735000" />
       <workItem from="1646188266499" duration="2365000" />
-      <workItem from="1646191708360" duration="2326000" />
+      <workItem from="1646191708360" duration="2780000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1610675010174</created>
@@ -691,7 +691,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646191903072</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="zzd update">
+      <created>1646197592989</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1646197592989</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
