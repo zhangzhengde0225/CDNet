@@ -107,6 +107,12 @@ The Academic homepage of Zhengde Zhang: [zhangzhengde0225.github.io](https://zha
 
 # Acknowledgement
 
+This work was supported by the National Natural
+Science Foundation of China [Grant Numbers: 61873163]. 
+
+We acknowledge the Center for High Performance Computing at
+Shanghai Jiao Tong University for providing computing resources.
+
 We are very grateful to the 
 [yolov5](https://github.com/ultralytics/yolov5) project
 for the benchmark detection algorithm.

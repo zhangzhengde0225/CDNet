@@ -1,7 +1,7 @@
 
 #### [English](https://github.com/zhangzhengde0225/CDNet) | 简体中文
 
-如果本项目对你有帮助，请点击项目右上角star支持一下和引用论文。
+如果本项目对你有帮助，请点击项目右上角star支持一下和引用下面的论文。
 
 # CDNet
 
@@ -106,6 +106,10 @@ Zhengde Zhang (drivener@163.com)负责维护。
 Zhengde Zhang的学术主页: [zhangzhengde0225.github.io](https://zhangzhengde0225.github.io).
 
 # 致谢Acknowledgement
+
+本工作得到了国家自然科学基金会的支持[编号：61873163]。
+
+我们非常感谢上海交通大学高性能计算中心提供计算资源。
 
 我们非常感谢
 [yolov5](https://github.com/ultralytics/yolov5) 
