@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="98ee5719-0d67-4120-a53f-27e008b8c3b4" name="Default" comment="zzd update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/README_zh_cn.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README_zh_cn.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -433,7 +431,8 @@
       <workItem from="1646188266499" duration="2365000" />
       <workItem from="1646191708360" duration="4381000" />
       <workItem from="1646208346597" duration="822000" />
-      <workItem from="1646209557276" duration="134000" />
+      <workItem from="1646209557276" duration="157000" />
+      <workItem from="1646485242128" duration="96000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1610675010174</created>
@@ -736,7 +735,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646208925483</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="zzd update">
+      <created>1646209695980</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1646209695981</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
