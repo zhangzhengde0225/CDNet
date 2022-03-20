@@ -1,9 +1,11 @@
+[![Stars](https://img.shields.io/github/stars/zhangzhengde0225/CDNet)](
+https://github.com/zhangzhengde0225/CDNet)
+[![Open issue](https://img.shields.io/github/issues/zhangzhengde0225/CDNet)](
+https://github.com/zhangzhengde0225/CDNet/issues)
 [![Datasets](https://img.shields.io/static/v1?label=Download&message=datasets&color=green)](
 https://github.com/zhangzhengde0225/CDNet/blob/master/docs/DATASETS.md)
 [![Datasets](https://img.shields.io/static/v1?label=Download&message=source_code&color=orange)](
 https://github.com/zhangzhengde0225/CDNet/archive/refs/heads/master.zip)
-[![Open issue](https://img.shields.io/github/issues/zhangzhengde0225/CDNet)](https://github.com/zhangzhengde0225/CDNet/issues)
-[![Stars](https://img.shields.io/github/stars/zhangzhengde0225/CDNet)](https://github.com/zhangzhengde0225/CDNet)
 #### English | [简体中文](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/README_zh_cn.md)
 
 Please **star this project** in the upper right corner and **cite this paper** blow 
