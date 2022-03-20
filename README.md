@@ -1,3 +1,6 @@
+[![Open issue](https://img.shields.io/github/issues/xinntao/Real-ESRGAN)](https://github.com/zhangzhengde0225/CDNet/issues)
+
+
 #### English | [简体中文](https://github.com/zhangzhengde0225/CDNet/blob/master/docs/README_zh_cn.md)
 
 Please **star this project** in the upper right corner and **cite this paper** blow 
