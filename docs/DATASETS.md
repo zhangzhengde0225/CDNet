@@ -1,5 +1,6 @@
 # DATASETS
 
+The crosswalk detection datasets contains 3080 images for train and 1770 images for test.
 
 ## Trainset
 + Download from [Baidu Pan](https://pan.baidu.com/s/1jAsQ_kbU7cX0AqK4wDm6LA), passwd: **hul6**
